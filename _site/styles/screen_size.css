@@ -1,0 +1,65 @@
+@media screen and (max-width: 800px) {
+
+  .container.post > p > img {
+    margin-bottom: 2em;
+  }
+
+  .container.post > p > img:first-child {
+    margin-top: 2em;
+  }
+
+  h3 {
+    margin-top: 2em;
+    margin-bottom: 0.8em;
+  }
+
+
+  .home_title {
+    margin-bottom: 60px;
+  }
+
+  .home_introduction {
+    margin-bottom: 60px;
+  }
+
+
+  /* SPACERS *******************************/
+
+  .spacer_top {
+    height: 140px;
+  }
+
+  .spacer_bottom {
+    height: 140px;
+  }
+
+  .space_between_abstract_and_content {
+    height: 80px;
+  }
+
+  /*****************************************/
+
+
+  /* BLOG LIST *****************************/
+
+  .blog_list {
+    margin-left: 0;
+    width: 100%;
+  }
+
+  .blog_list_post {
+    margin: 0; /* same as blog_list margin-left */
+    height: 230px;
+    margin-bottom: 20px;
+  }
+
+  .blog_list_post .blog_list_post_top_padding {
+    height: 10px;
+  }
+
+  .blog_list_post .blog_list_post_top_padding {
+    height: 20px;
+  }
+
+  /*****************************************/
+}

@@ -1,0 +1,151 @@
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Marco Moroni</title>
+  <meta name="description" content="Ciao, here's my portfolio.">
+  <meta name="viewport" content="width=device-width, maximum-scale=1, minimum-scale=1" />
+  <link rel="stylesheet" href="/portfolio/styles/default.css">
+  <link rel="stylesheet" href="/portfolio/styles/home.css">
+  <link rel="stylesheet" href="/portfolio/styles/screen_size.css">
+  <link rel="icon" href="https://github.com/marcomoroni.png?size=16">
+  <link href="https://fonts.googleapis.com/css?family=Muli:300,300i,900,900i" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Cutive+Mono" rel="stylesheet">
+  <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> -->
+</head>
+
+<body>
+  <div class="nav_dots">
+  
+    
+    <div></div>
+    
+  
+    
+    <div></div>
+    
+  
+    
+    <div class="current"></div>
+    
+  
+    
+    <div></div>
+    
+  
+    
+    <div></div>
+    
+  
+    
+    <div></div>
+    
+  
+</div>
+
+
+<div class="spacer_top"></div>
+
+<div class="container">
+
+  <div style="margin: auto; max-width: 380px; margin-bottom: 1em;">
+    <div class="tags_list">
+
+  
+
+    
+      <div class="tag">
+  <p>physics</p>
+</div>
+
+    
+
+  
+
+</div>
+
+  </div>
+  <div class="abstract">
+  
+  <p>Some physics-based animations with particles and rigid bodies.</p>
+  
+</div>
+
+
+</div>
+
+<div class="space_between_abstract_and_content"></div>
+
+<div class="container post">
+
+  <p>This is a set of physics-based animations I made at university using C++. <a href="https://github.com/marcomoroni/set09119">Here’s the code on GitHub</a>.</p>
+
+<h3 id="flag">Flag</h3>
+
+<p>These particles are connected by a system of springs and I applied an isotropic wind to the the triangulated cloth (not to each individual particles).</p>
+
+<p><img src="/portfolio/assets/pba/flag.gif" alt="" /></p>
+
+<h3 id="point-gravity">Point gravity</h3>
+
+<p>Here you can see a group of particles that are affected by two points of gravity. The gravity, just as you would expect, is stronger the closer to these points and null after a certain set distance.</p>
+
+<p><img src="/portfolio/assets/pba/point.gif" alt="" /></p>
+
+<h3 id="newtons-gravity-between-any-two-bodies">Newton’s gravity between any two bodies</h3>
+
+<p>While the previous simulation does not use any physically correct gravitational formula, this one uses Newton’s law of gravity: every two particles with mass are affected by each other. To be able to see such interactions I decided to make them stick together once they get really close and to enclose everything inside a box.</p>
+
+<p>The lighter particle has a higher mass.</p>
+
+<p><img src="/portfolio/assets/pba/newton.gif" alt="" /></p>
+
+<h3 id="super-mario-galaxys-gravity"><em>Super Mario Galaxy</em>’s gravity</h3>
+
+<p>In <em>Super Mario Galaxy</em> the player is able to walk in planetoids of any shape and size. This is possible because bodies are affected by the gravity of only one planetoid at once and the gravity direction is the inverse of the normal of (usually) the closest surface.</p>
+
+<p>I’ve managed to apply this principle to particles in a planetoid with the shape of a box. The gravity direction is the normalised vector from the particle to a point <em>U</em>, where <em>U</em> is the point on (or in) the planetoid closest to the particle.</p>
+
+<p><img src="/portfolio/assets/pba/smg.gif" alt="" /></p>
+
+<h3 id="rigidbody-obb">RigidBody (OBB)</h3>
+
+<p>This is a rigidbody with the shape of a box (OBB) colliding with a plane. In order to make the rigidbody’s collision work I had to implement forces as impulses.</p>
+
+<p><img src="/portfolio/assets/pba/cube.gif" alt="" /></p>
+
+<h3 id="collisions-between-obbs">Collisions between OBBs</h3>
+
+<p>This last simulation has two OBBs colliding with each other.</p>
+
+<p><img src="/portfolio/assets/pba/domino.gif" alt="" /></p>
+
+
+  <div class="bottom_navigation_buttons">
+
+    <!-- Can be with or without accent colour, and when not hover can or cannot have the background.
+normal / nil : accent colour, no background when no hover
+important : accent colour, backround when no hover -->
+
+
+  <a class=button href=/portfolio/index.html>Home</a>
+
+
+
+    
+      <!-- Can be with or without accent colour, and when not hover can or cannot have the background.
+normal / nil : accent colour, no background when no hover
+important : accent colour, backround when no hover -->
+
+
+  <a class=button href=/portfolio/site/>Next   &#8227;</a>
+
+
+    
+
+  </div>
+
+</div>
+
+<div class="spacer_bottom"></div>
+
+</body>

@@ -1,0 +1,36 @@
+---
+layout: default
+---
+
+{% include nav_dots.html%}
+
+<div class="spacer_top"></div>
+
+<div class="container">
+
+  <div style="margin: auto; max-width: 380px; margin-bottom: 1em;">
+    {% include tags.html%}
+  </div>
+  {% include abstract.html %}
+
+</div>
+
+<div class="space_between_abstract_and_content"></div>
+
+<div class="container post">
+
+  {{ content }}
+
+  <div class="bottom_navigation_buttons">
+
+    {% include button.html link="/index.html" text="Home" %}
+
+    {% if page.previous.url %}
+      {% include button.html link=page.previous.url text="Next   &#8227;" %}
+    {% endif %}
+
+  </div>
+
+</div>
+
+<div class="spacer_bottom"></div>

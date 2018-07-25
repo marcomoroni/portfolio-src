@@ -1,0 +1,9 @@
+<!-- Can be with or without accent colour, and when not hover can or cannot have the background.
+normal / nil : accent colour, no background when no hover
+important : accent colour, backround when no hover -->
+
+{% if include.type %}
+  <a class="button {{ include.type }}" href={{ site.baseurl }}{{ include.link }}>{{ include.text }}</a>
+{% else %}
+  <a class=button href={{ site.baseurl }}{{ include.link }}>{{ include.text }}</a>
+{% endif %}

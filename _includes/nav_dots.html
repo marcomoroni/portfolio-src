@@ -1,0 +1,9 @@
+<div class="nav_dots">
+  {% for post in site.posts %}
+    {% if page==post %}
+    <div class="current"></div>
+    {% else %}
+    <div></div>
+    {% endif %}
+  {% endfor %}
+</div>

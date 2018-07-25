@@ -1,0 +1,362 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Muli', sans-serif;
+  font-size: 100%;
+  font-weight: 300;
+  text-decoration: none;
+  line-height: 180%
+}
+
+::selection{
+  background: rgba(255, 106, 80, 0.2);
+}
+
+.container {
+  max-width: 46em;
+  margin: auto;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.container > p > img {
+  max-width: 100%;
+  max-height: 50em;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.container.post > p > img {
+  margin-bottom: 4em;
+}
+
+.container.post > p > img:first-child {
+  margin-top: 4em;
+}
+
+/* no top or bottom margins for the first and last image */
+/* see bottom */
+
+body {
+  background-color: rgb(253, 250, 247);
+}
+
+h1, h2, h3, p, li {
+  color: #4c4c4c;
+  font-size: 85%;
+}
+
+h1 {
+  text-align: center;
+  /* font-weight: 900; */
+  font-size: 260%;
+  color: #333333;
+}
+
+h2 {
+  text-align: center;
+  font-size: 180%;
+  color: #333333;
+  margin-bottom: 3em;
+}
+
+h3 {
+  font-weight: 900;
+  color: #333333;
+  margin-top: 4em;
+  margin-bottom: 1.5em;
+}
+
+h3 em {
+  font-weight: 900;
+}
+
+ul {
+  padding-left: 40px;
+}
+
+/*a {
+  color: rgb(255, 106, 80);
+  border-bottom: 1px solid transparent;
+  transition: all 0.2s ease;
+}
+
+a:hover {
+  color: rgb(255, 106, 80);
+  border-color: rgb(255, 106, 80);
+  transition: all 0s;
+}*/
+
+a {
+  color: #4c4c4c;
+  border-bottom: 1px solid #4c4c4c;
+  transition: all 0.3s ease;
+}
+
+a:hover {
+  color: rgb(255, 106, 80);
+  border-color: rgb(255, 106, 80);
+  transition: all 0s;
+}
+
+/*p, ul{
+  margin-bottom: 1.23em;
+}
+
+p:last-child {
+  margin-bottom: 0;
+}*/
+
+
+/* SPACERS *******************************/
+
+.spacer_top {
+  height: 14.4em;
+}
+
+.spacer_bottom {
+  height: 14.4em;
+}
+
+.space_between_abstract_and_content {
+  height: 10.6em;
+}
+
+/*****************************************/
+
+
+/* BUTTONS *******************************/
+
+.button {
+  padding: 10px 16px 10px 16px;
+  font-size: 85%;
+  white-space:pre;
+  border-bottom: 1px solid transparent; /*don't underline*/
+  color: rgb(255, 106, 80);
+}
+
+.button:hover {
+  border-bottom: 1px solid transparent; /*don't underline*/
+  background-color: rgb(255, 106, 80);
+  color: rgb(253, 250, 247);
+}
+
+.button.filled {
+  background-color: rgb(255, 106, 80);;
+  color: rgb(253, 250, 247);
+}
+
+.button.filled:hover {
+
+}
+
+/*****************************************/
+
+
+/* BOTTOM NAVIGATION BAR *****************/
+
+.bottom_navigation_buttons {
+  margin-top: 9.4em;
+  text-align: center;
+}
+
+.bottom_navigation_buttons .button {
+  margin-right: 2.5em;
+}
+
+.bottom_navigation_buttons .button:last-child
+{
+  margin-right: 0;
+}
+
+/*****************************************/
+
+
+/* TAGS LIST *****************************/
+
+.tags_list {
+
+  /*flexbox*/
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+
+}
+
+.tag {
+  background-color: #4c4c4c;
+  padding: 0.2em 0.45em 0.2em 0.6em;
+  margin-right: 0.3em;
+  margin-bottom: 0.3em;
+  transition: all 0.3s ease;
+}
+
+.tag:last-child {
+  margin-right: 0em;
+}
+
+.tag p {
+  font-size: 55%;
+  color: rgb(253, 250, 247);
+  text-transform: uppercase;
+  letter-spacing: 0.28em;
+  transition: all 0.3s ease;
+}
+
+/*****************************************/
+
+
+/* BLOG LIST *****************************/
+
+.blog_list {
+
+  /*flexbox*/
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: flex-start;
+
+  margin-left: 1.8em;
+  width: calc(100% - 3.6em);
+}
+
+.blog_list_post {
+  width: 37em;
+  height: 27em;
+  margin: 1.8em; /* same as blog_list margin-left */
+
+  position: relative;
+
+  /* if there is an image it is set in the html */
+  background-size: cover;
+  background-position: center;
+  background-color: rgb(253, 250, 247);
+  background-blend-mode: luminosity;
+}
+
+/* for correct z index */
+.blog_list_post div {
+  position: relative;
+}
+
+.blog_list_post .blog_list_post_top_padding {
+  height: 6em;
+}
+
+.blog_list_post .overlay {
+  position: absolute;
+  background-color: #f2ece6;
+  opacity: 0.85;
+  height: inherit;
+  width: 100%;
+  transition: all 0.3s ease;
+}
+
+.blog_list_post > a {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-bottom: 0px solid transparent; /*don't underline*/
+}
+
+.blog_list_post > a:hover {
+  border-bottom: 0px solid transparent; /*don't underline*/
+}
+
+.blog_list_post:hover .overlay {
+  /* background-color: rgb(255, 106, 80); */
+  opacity: 0.94;
+  transition: all 0s;
+}
+
+/*.blog_list_post:hover p {
+  color: rgb(253, 250, 247);
+  transition: all 0s;
+}
+
+.blog_list_post:hover .tag {
+  background-color: rgb(253, 250, 247);
+  transition: all 0s;
+}
+
+.blog_list_post:hover .tag p {
+  color: rgb(255, 106, 80);
+  transition: all 0s;
+}*/
+
+/* Add fake posts with same horizontal widths and margins as real ones to align the last row of the flexbox to the left */
+.fake_post {
+  margin-left: 1.8em;
+  margin-right: 1.8em;
+  width: 37em;
+  height: 0;
+}
+
+/*****************************************/
+
+
+/* ABSTRACT ******************************/
+
+.abstract {
+  margin: auto;
+  max-width: 380px;
+  font-size: 110%;
+}
+
+.abstract p
+{
+  font-size: 100%;
+  color: #333333;
+  font-family: 'Cutive Mono', monospace;
+  transition: all 0.2s ease;
+}
+
+/*****************************************/
+
+
+/* NAV DOTS ******************************/
+
+.nav_dots {
+
+  /*flexbox*/
+  display: flex;
+  flex-direction: row;
+
+  position: absolute;
+  margin-left: 50%;
+  transform: translateX(-50%);
+  margin-top: 1em;
+}
+
+.nav_dots div {
+  background-color: #4c4c4c;
+  opacity: 0.18;
+  width: 0.4em;
+  height: 0.4em;
+  margin-left: 0.8em;
+  margin-right: 0.8em;
+}
+
+.nav_dots .current {
+  opacity: 1;
+}
+
+/*****************************************/
+
+
+
+/* no top or bottom margins for the first and last image, p, h3 */
+.container.post > p:first-child,
+.container.post > h3:first-child,
+.container.post > p:first-child > img:first-child {
+  margin-top: 0;
+}
+.container.post > p:last-child,
+.container.post > h3:last-child,
+.container.post > p:last-child-child > img:last-child-child {
+  margin-bottom: 0;
+}

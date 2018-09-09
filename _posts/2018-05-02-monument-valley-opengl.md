@@ -16,9 +16,9 @@ You've probably noticed the impossible geometries: I made them by using a camera
 
 I used three directional lights facing the three visible surfaces. In this way I have a higher control of the colours I want my scene to have.
 
-The phong shader had to be used without the reflection component because reflection is affected by the distance from the camera. Using it would break the illusion of impossible geometries.
+The Phong shader had to be used without the reflection component because reflection is affected by the distance from the camera. Using it would break the illusion of impossible geometries.
 
-To create the water waves that you can see on the left I multiplied two identical normal maps moving in different directions.
+To create the water waves that you can see on the left cube I multiplied two identical normal maps moving in different directions.
 
 Finally I worked with frames to allow multiple ones to work at the same time: I can have multiple post-processing effects, such as vignette and inverse colours.
 

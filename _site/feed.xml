@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.2">Jekyll</generator><link href="http://localhost:4000/portfolio/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/portfolio/" rel="alternate" type="text/html" /><updated>2018-09-09T15:17:40+01:00</updated><id>http://localhost:4000/portfolio/</id><title type="html">Marco Moroni</title><subtitle>Ciao, here's my portfolio.</subtitle><entry><title type="html">Clock</title><link href="http://localhost:4000/portfolio/clock/" rel="alternate" type="text/html" title="Clock" /><published>2018-09-09T00:00:00+01:00</published><updated>2018-09-09T00:00:00+01:00</updated><id>http://localhost:4000/portfolio/clock</id><content type="html" xml:base="http://localhost:4000/portfolio/clock/">&lt;p&gt;&lt;img src=&quot;/portfolio/assets/clock/clock-sand.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.2">Jekyll</generator><link href="http://localhost:4000/portfolio/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/portfolio/" rel="alternate" type="text/html" /><updated>2018-09-09T15:27:27+01:00</updated><id>http://localhost:4000/portfolio/</id><title type="html">Marco Moroni</title><subtitle>Ciao, here's my portfolio.</subtitle><entry><title type="html">Clock</title><link href="http://localhost:4000/portfolio/clock/" rel="alternate" type="text/html" title="Clock" /><published>2018-09-09T00:00:00+01:00</published><updated>2018-09-09T00:00:00+01:00</updated><id>http://localhost:4000/portfolio/clock</id><content type="html" xml:base="http://localhost:4000/portfolio/clock/">&lt;p&gt;&lt;img src=&quot;/portfolio/assets/clock/clock-sand.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;/portfolio/assets/clock/clock-sky.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
@@ -100,9 +100,9 @@
 
 &lt;p&gt;I used three directional lights facing the three visible surfaces. In this way I have a higher control of the colours I want my scene to have.&lt;/p&gt;
 
-&lt;p&gt;The phong shader had to be used without the reflection component because reflection is affected by the distance from the camera. Using it would break the illusion of impossible geometries.&lt;/p&gt;
+&lt;p&gt;The Phong shader had to be used without the reflection component because reflection is affected by the distance from the camera. Using it would break the illusion of impossible geometries.&lt;/p&gt;
 
-&lt;p&gt;To create the water waves that you can see on the left I multiplied two identical normal maps moving in different directions.&lt;/p&gt;
+&lt;p&gt;To create the water waves that you can see on the left cube I multiplied two identical normal maps moving in different directions.&lt;/p&gt;
 
 &lt;p&gt;Finally I worked with frames to allow multiple ones to work at the same time: I can have multiple post-processing effects, such as vignette and inverse colours.&lt;/p&gt;
 
@@ -122,7 +122,7 @@
 
 &lt;p&gt;The theme for the &lt;a href=&quot;https://globalgamejam.org/&quot;&gt;Global Game Jam 2017&lt;/a&gt; was &lt;em&gt;waves&lt;/em&gt; and because it was my first Game Jam, I decided to keep it simple. I participated with a friend and we had a lot of fun!&lt;/p&gt;
 
-&lt;p&gt;Our idea was to make a &lt;em&gt;Layton&lt;/em&gt; style puzzle game with a seaside theme and use the movement of waves to solve it. We used &lt;a href=&quot;https://unity3d.com/&quot;&gt;Unity&lt;/a&gt; and I drew the assets in &lt;a href=&quot;http://www.pixelmator.com/&quot;&gt;Pixelmator&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Our idea was to make a &lt;em&gt;Professor Layton&lt;/em&gt; style puzzle game with a seaside theme and use the movement of waves to solve it. We used &lt;a href=&quot;https://unity3d.com/&quot;&gt;Unity&lt;/a&gt; and I drew the assets in &lt;a href=&quot;http://www.pixelmator.com/&quot;&gt;Pixelmator&lt;/a&gt;.&lt;/p&gt;
 
 &lt;p&gt;Here’s how you play it. By pressing the directional arrows you move all the movable pieces on the grid by 1 step in the direction you chose. Your goal is to place all the pearls back to the corresponding shell.&lt;/p&gt;
 

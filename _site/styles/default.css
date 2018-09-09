@@ -250,7 +250,7 @@ p:last-child {
 .blog_list_post .overlay {
   position: absolute;
   background-color: #f2ece6;
-  opacity: 0.85;
+  opacity: 0.9;
   height: inherit;
   width: 100%;
   transition: all 0.3s ease;
@@ -271,7 +271,7 @@ p:last-child {
 
 .blog_list_post:hover .overlay {
   /* background-color: rgb(255, 106, 80); */
-  opacity: 0.94;
+  opacity: 0.95;
   transition: all 0s;
 }
 

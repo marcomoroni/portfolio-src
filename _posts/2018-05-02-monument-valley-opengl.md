@@ -1,5 +1,5 @@
 ---
-abstract: "A scene with impossible geometries made using OpenGL. My goal was to reproduce the art style of the game Monument Valley."
+abstract: "A scene with impossible geometries made using OpenGL that replicates the art style of the game Monument Valley."
 permalink: /mv/
 tags: ["computer graphics"]
 assets_folder: "/assets/mv"

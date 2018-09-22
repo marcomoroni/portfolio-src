@@ -1,5 +1,5 @@
 ---
-abstract: "A tiny puzzle game I made with a friend during the Global Game Jam 2017."
+abstract: "A tiny puzzle game for the Global Game Jam 2017."
 permalink: /pearl/
 tags: ["game jam", "games dev", unity]
 assets_folder: "/assets/pearl"

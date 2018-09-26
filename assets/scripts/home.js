@@ -1,4 +1,4 @@
-// Typewriter
+// Typewriter for title
 
 var i = 0;
 var mySpan = document.getElementById("marco");

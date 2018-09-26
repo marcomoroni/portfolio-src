@@ -17,8 +17,8 @@ function typeWriter()
   {
     t.innerHTML += originalText.charAt(i);
     i++;
-    setTimeout(typeWriter, 100);
+    setTimeout(typeWriter, 120);
   }
 }
 
-setTimeout(typeWriter, 600)
+setTimeout(typeWriter, 1000)

@@ -130,7 +130,7 @@ p:last-child {
   font-size: 65%;
   color: {{page.text_color}};
   text-transform: uppercase;
-  letter-spacing: 0.7em;
+  letter-spacing: 0.8em;
   font-weight: 700;
   opacity: 0.35;
 }

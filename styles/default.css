@@ -121,6 +121,18 @@ p:last-child {
   margin-bottom: 0;
 }*/
 
+.container.post > .date {
+  display: block;
+  position: absolute;
+  transform-origin: top left;
+  transform: rotate(90deg) translateY(4em) translateX(0.5em);
+
+  font-size: 65%;
+  color: {{page.text_color}};
+  text-transform: uppercase;
+  letter-spacing: 0.6em;
+}
+
 
 /* SPACERS *******************************/
 

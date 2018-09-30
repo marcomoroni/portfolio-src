@@ -1,7 +1,7 @@
 ---
 abstract: "Istrice."
 permalink: /istrice/
-tags: ["procedural generation", unity]
+tags: ["procedural generation", cryengine]
 assets_folder: "/assets/istrice"
 ---
 

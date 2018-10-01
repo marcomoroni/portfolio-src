@@ -88,7 +88,7 @@
 
 <h3 id="flag">Flag</h3>
 
-<p>These particles are connected by a system of springs and I applied an isotropic wind to the the triangulated cloth (not to each individual particles).</p>
+<p>These particles are connected by springs and I applied an isotropic wind to the the triangulated cloth (not to each individual particles).</p>
 
 <p><img src="/portfolio/assets/pba/flag.gif" alt="" /></p>
 
@@ -100,7 +100,7 @@
 
 <h3 id="newtons-gravity-between-any-two-bodies">Newton’s gravity between any two bodies</h3>
 
-<p>While the previous simulation does not use any physically correct gravitational formula, this one uses Newton’s law of gravity: every two particles with mass are affected by each other. To be able to see such interactions I decided to make them stick together once they get really close and to enclose everything inside a box.</p>
+<p>While the previous simulation does not use any physically correct gravitational formula, this one uses Newton’s law of gravity: every two particles with mass are affected by each other. To be able to see such interactions I decided to make them stick together once they get very close.</p>
 
 <p>The lighter particle has a higher mass.</p>
 
@@ -110,13 +110,13 @@
 
 <p>In <em>Super Mario Galaxy</em> the player is able to walk in planetoids of any shape and size. This is possible because bodies are affected by the gravity of only one planetoid at once and the gravity direction is the inverse of the normal of (usually) the closest surface.</p>
 
-<p>I’ve managed to apply this principle to particles in a planetoid with the shape of a box. The gravity direction is the normalised vector from the particle to a point <em>U</em>, where <em>U</em> is the point on (or in) the planetoid closest to the particle.</p>
+<p>I’ve managed to apply this principle to particles in box-shaped planetoids. The gravity direction is the normalised vector from the particle to a point <em>U</em>, where <em>U</em> is the point on (or in) the planetoid closest to the particle.</p>
 
 <p><img src="/portfolio/assets/pba/smg.gif" alt="" /></p>
 
 <h3 id="rigidbody-obb">RigidBody (OBB)</h3>
 
-<p>This is a rigidbody with the shape of a box (OBB) colliding with a plane. In order to make the rigidbody’s collision work I had to implement forces as impulses.</p>
+<p>This is a rigidbody with the shape of a box (OBB) colliding with a plane.</p>
 
 <p><img src="/portfolio/assets/pba/cube.gif" alt="" /></p>
 

@@ -12,7 +12,7 @@ This is a coursework I've made for a Computer Graphics module. I used [OpenGL](h
 
 ![A level from the game]({{ site.baseurl }}{{ page.assets_folder }}/mv_screen.jpg)
 
-You've probably noticed the impossible geometries: I made them by using a camera with an orthographical projection, therfore you can't perceive depth.
+You've probably noticed the impossible geometries: I made them by using a camera with an orthographical projection, therefore you can't perceive depth.
 
 I used three directional lights facing the three visible surfaces. In this way I have a higher control of the colours I want my scene to have.
 
@@ -20,9 +20,9 @@ The Phong shader had to be used without the reflection component because reflect
 
 To create the water waves that you can see on the left cube I multiplied two identical normal maps moving in different directions.
 
-Finally I worked with frames to allow multiple ones to work at the same time: I can have multiple post-processing effects, such as vignette and inverse colours.
+Finally, I worked with frames to allow multiple ones to work at the same time: I can have multiple post-processing effects, such as vignette and inverse colours.
 
-You can take a look at it on my [GitHub](https://github.com/MarcoMoroni/CG_cw2) and you can also read the [report](href="https://github.com/MarcoMoroni/CG_cw2/blob/master/Report/report.pdf) I worte.
+You can take a look at it on my [GitHub](https://github.com/MarcoMoroni/CG_cw2) and you can also read the [report](href="https://github.com/MarcoMoroni/CG_cw2/blob/master/Report/report.pdf) I wrote.
 
 You should play that game btw, it's gorgeous.
 

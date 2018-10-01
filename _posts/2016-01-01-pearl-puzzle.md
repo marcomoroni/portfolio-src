@@ -12,7 +12,7 @@ The theme for the [Global Game Jam 2017](https://globalgamejam.org/) was *waves*
 
 Our idea was to make a *Professor Layton* style puzzle game with a seaside theme and use the movement of waves to solve it. We used [Unity](https://unity3d.com/) and I drew the assets in [Pixelmator](http://www.pixelmator.com/).
 
-Here's how you play it. By pressing the directional arrows you move all the movable pieces on the grid by 1 step in the direction you chose. Your goal is to place all the pearls back to the corresponding shell.
+Here's how you play it: by pressing the directional arrows you move all the movable pieces on the grid by 1 step in the direction you chose. Your goal is to place all the pearls back to the corresponding shell.
 
 After the 48 hours we ended up with the two working levels that you can see below.
 

@@ -121,19 +121,23 @@ p:last-child {
   margin-bottom: 0;
 }*/
 
+
+/* DATE **********************************/
+
 .container.post > .date {
   display: block;
   position: absolute;
   transform-origin: top left;
   transform: rotate(90deg) translateY(6em) translateX(0.4em);
 
-  font-size: 65%;
+  font-size: 63%;
   color: {{page.text_color}};
   text-transform: uppercase;
   letter-spacing: 0.8em;
-  font-weight: 700;
-  opacity: 0.35;
+  opacity: 0.45;
 }
+
+/*****************************************/
 
 
 /* SPACERS *******************************/

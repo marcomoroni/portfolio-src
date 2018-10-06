@@ -4,6 +4,7 @@ permalink: /mv/
 tags: ["computer graphics"]
 assets_folder: "/assets/mv"
 preview_img: "/assets/mv/animated.gif"
+favourite: true
 ---
 
 ![]({{ site.baseurl }}{{ page.assets_folder }}/animated.gif)

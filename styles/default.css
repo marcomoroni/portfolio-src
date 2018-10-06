@@ -347,12 +347,17 @@ p:last-child {
   font-size: 110%;
 }
 
-.abstract p
+.abstract p,
+.abstract p > span
 {
   font-size: 100%;
   color: {{page.abstract_color}};
   font-family: 'Cutive Mono', monospace;
   transition: all 0.2s ease;
+}
+
+.favourite_gliph {
+  /* color: #cdd040; */
 }
 
 /*****************************************/

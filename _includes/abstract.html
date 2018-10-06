@@ -1,7 +1,7 @@
 <div class="abstract">
   {% if include.post %}
-  <p>{{ include.post.abstract }}</p>
+  <p>{{ include.post.abstract }}{% if include.post.favourite == true %}<!-- <span class="favourite_gliph">&#x2606;</span>-->{% endif %}</p>
   {% else %}
-  <p>{{ page.abstract }}</p>
+  <p>{{ page.abstract }}{% if page.favourite == true %}<!-- <span class="favourite_gliph">&#x2606;</span>-->{% endif %}</p>
   {% endif %}
 </div>

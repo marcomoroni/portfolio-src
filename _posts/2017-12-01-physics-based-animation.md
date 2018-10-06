@@ -4,6 +4,7 @@ permalink: /pba/
 tags: [physics]
 assets_folder: "/assets/pba"
 preview_img: "/assets/pba/point.gif"
+favourite: true
 ---
 
 This is a set of physics-based animations I made at university using C++. [Here's the code on GitHub](https://github.com/marcomoroni/set09119).

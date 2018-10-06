@@ -122,6 +122,42 @@ p:last-child {
 }*/
 
 
+/* CODE **********************************/
+
+.highlighter-rouge {
+  font-family: 'Overpass Mono', monospace;
+  font-size: 90%;
+  /* color: red; */
+  background-color: rgb(242, 236, 229);
+  /* border: 1px solid rgb(227, 228, 226); */
+}
+
+p .highlighter-rouge,
+li .highlighter-rouge {
+  padding: 3px 5px 3px 5px;
+}
+
+div.highlighter-rouge{
+  padding: 26px 30px 26px 30px;
+  margin-top: 24px;
+  margin-bottom: 24px;
+  overflow-x: scroll;
+}
+
+/* Fix overflow scroll and padding problem */
+div.highlight {
+  display: inline-block;
+}
+
+div.highlighter-rouge code {
+  color: {{page.text_color}}; /* same as p */
+  font-size: 85%; /* same as p */
+  font-family: 'Overpass Mono', monospace;
+}
+
+/*****************************************/
+
+
 /* DATE **********************************/
 
 .container.post > .date {
@@ -420,11 +456,13 @@ p:last-child {
 /* no top or bottom margins for the first and last image, p, h3 */
 .container.post > p:first-child,
 .container.post > h3:first-child,
-.container.post > p:first-child > img:first-child {
+.container.post > p:first-child > img:first-child,
+.container.post > div.highlighter-rouge:first-child {
   margin-top: 0;
 }
 .container.post > p:last-child,
 .container.post > h3:last-child,
-.container.post > p:last-child-child > img:last-child-child {
+.container.post > p:last-child > img:last-child,
+.container.post > div.highlighter-rouge:last-child {
   margin-bottom: 0;
 }

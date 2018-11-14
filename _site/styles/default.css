@@ -258,6 +258,7 @@ div.highlighter-rouge code {
   text-transform: uppercase;
   letter-spacing: 0.28em;
   transition: all 0.3s ease;
+  font-weight: 400;
 }
 
 /*****************************************/

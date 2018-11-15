@@ -121,6 +121,10 @@ p:last-child {
   margin-bottom: 0;
 }*/
 
+sup {
+  font-size: 65%;
+}
+
 
 /* CODE **********************************/
 
@@ -387,9 +391,11 @@ div.highlighter-rouge code {
 .abstract p,
 .abstract p > span
 {
-  font-size: 100%;
+  font-size: 96%;
   color: {{page.abstract_color}};
-  font-family: 'Cutive Mono', monospace;
+  font-family: 'courier-std', monospace;
+  font-style: normal;
+  font-weight: 400;
   transition: all 0.2s ease;
 }
 

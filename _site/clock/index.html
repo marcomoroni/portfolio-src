@@ -19,6 +19,14 @@
   <div class="nav_dots">
   
     
+    <div></div>
+    
+  
+    
+    <div></div>
+    
+  
+    
     <div class="current"></div>
     
   
@@ -127,6 +135,20 @@ important : accent colour, backround when no hover -->
 </div>
 
 <div class="spacer_bottom"></div>
+
+<<script>
+  // Add the post date to the first paragraph that does not contain an image
+  var container = document.getElementsByClassName("container post")[0];
+  var ps = container.getElementsByTagName("p");
+  for (i = 0; i < ps.length; i++)
+  {
+    if (ps[i].getElementsByTagName("img").length < 1)
+    {
+      ps[i].insertAdjacentHTML("afterbegin", "September 2018\xa0\xa0&#92;&#92;&#92;\xa0\xa0");
+      break;
+    }
+  }
+</script>
 
   <script src="/portfolio/assets/scripts/typewriter.js"></script>
 </body>

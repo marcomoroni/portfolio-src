@@ -1,7 +1,7 @@
 ---
-abstract: "Tabletop."
+abstract: "A tabletop engine with a focus on tools for developers."
 permalink: /tabletop/
-tags: ["tools dev", unity]
+tags: ["tools", "games dev", unity]
 assets_folder: "/assets/tabletop"
 ---
 

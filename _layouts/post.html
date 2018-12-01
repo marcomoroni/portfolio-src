@@ -45,7 +45,14 @@ layout: default
   {
     if (ps[i].getElementsByTagName("img").length < 1)
     {
-      ps[i].insertAdjacentHTML("afterbegin", "{{ page.date | date: '%B %Y' }}\xa0\xa0&#92;&#92;&#92;\xa0\xa0");
+      var txt = "{{ page.date | date: '%B %Y' }}"
+      {% if page.updated %}
+        txt += ", updated {{ page.updated | date: '%B %Y' }}"
+      {% endif %}
+      txt += "\xa0\xa0\xa0&#92;&#92;&#92;\xa0\xa0\xa0";
+
+      ps[i].insertAdjacentHTML("afterbegin", txt);
+
       break;
     }
   }

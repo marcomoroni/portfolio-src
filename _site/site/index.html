@@ -15,7 +15,7 @@
 </head>
 
 <body>
-  <a href="/portfolio/" class="top_home_button" title="Home"></a>
+  <a href="/portfolio/" class="top_home_button" title="Home"><span>Marco Moroni</span></a>
   <div class="nav_dots">
   
     
@@ -100,13 +100,13 @@
 
   <p>I hope you’re enjoying this simple website because I took care of every little corner.</p>
 
-<p>I like minimalism, and you’ve probably noticed. I used warm colours and only one accent colour (orange) for interactable elements.</p>
+<p>I like minimalism, and you’ve probably noticed. I used warm colours and only one accent colour for interactive elements. It was very important for me to have visual consistency and a pleasant experience overall.</p>
 
-<p>The abstract (or title) of each portfolio entry uses a monospace font: this makes it easier to recognize this element throughout the site and it highlights the fact that this is a developer portfolio.</p>
+<p>The abstract (or title) of each portfolio entry uses a monospace font: this makes it easier to recognize this element throughout the site and it highlights the fact that this is a portfolio of a developer.</p>
 
-<p>The navigation is at the bottom of each page, starting from the home. By following it, the user can have a look at all my works in one go. The content of these pages is simple and concise with big pictures whenever possible. This is so because the user is most likely an employer, and they have a bunch of other portfolios waiting after mine. <em>Isn’t that right, mr. employer?</em></p>
+<p>The navigation is at the bottom of each page, starting from the home. By following it, the user can have a look at all my works in one go. The content of every page is simple and concise with big pictures whenever possible. This is so because the user is most likely an employer, and they have a bunch of other portfolios waiting after mine. <em>Isn’t that right, mr. employer?</em></p>
 
-<p>On the top left corner there’s an additional <em>Home</em> button. Although I prefer white spaces, I felt it was an essential element. To keep the UI consistent and proportional I had to omit a <em>Home</em> label and use a tooltip instead.</p>
+<p>On the top left corner there’s an additional <em>Home</em> button. I would have preferred not to have it, but usability is important.</p>
 
 <p>I used <a href="https://jekyllrb.com/">Jekyll</a> to build it from the ground up. I’m not a web developer but hey, it came out pretty good!</p>
 
@@ -147,7 +147,14 @@ important : accent colour, backround when no hover -->
   {
     if (ps[i].getElementsByTagName("img").length < 1)
     {
-      ps[i].insertAdjacentHTML("afterbegin", "May 2017\xa0\xa0&#92;&#92;&#92;\xa0\xa0");
+      var txt = "May 2017"
+      
+        txt += ", updated August 2018"
+      
+      txt += "\xa0\xa0\xa0&#92;&#92;&#92;\xa0\xa0\xa0";
+
+      ps[i].insertAdjacentHTML("afterbegin", txt);
+
       break;
     }
   }

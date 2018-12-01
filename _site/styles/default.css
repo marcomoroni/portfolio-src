@@ -406,7 +406,7 @@ div.highlighter-rouge code {
   position: absolute;
   margin-left: 50%;
   transform: translateX(-50%);
-  margin-top: 1em;
+  margin-top: 16px;
 }
 
 .nav_dots div {
@@ -429,6 +429,34 @@ div.highlighter-rouge code {
 
 .top_home_button {
   display: block;
+  position: fixed;
+  top: 16px; /* 16 - smt, so that the top pos looks 16px*/
+  left: 16px;
+  border-bottom: 1px solid transparent; /*don't underline*/
+  border: 3px solid rgb(255, 106, 80);
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 11px;
+  color: rgb(255, 106, 80);
+  transform-origin: 0 0;
+  transform: rotate(90deg) translateY(-31px);
+  padding: 4px 10px 3px 10px;
+}
+
+.top_home_button span {
+  margin-right: -2px; /* remove last letter spacing */
+  font-weight: inherit;
+}
+
+.top_home_button:hover {
+  transition: all 0.3s ease;
+  border-bottom: 1px solid transparent; /*don't underline*/
+  border: 3px solid rgb(255, 106, 80);
+}
+
+/*.top_home_button {
+  display: block;
   width: 0;
   height: 0;
   top: 1em;
@@ -436,14 +464,14 @@ div.highlighter-rouge code {
   position: absolute;
   border-top: 3.4em solid #4c4c4c;
 	border-right: 3.4em solid transparent;
-  border-bottom: 1px solid transparent; /*don't underline*/
+  border-bottom: 1px solid transparent;*/ /*don't underline*/
 }
 
-.top_home_button:hover {
+/*.top_home_button:hover {
   border-top: 3.4em solid rgb(255, 106, 80);
-  border-right: 3.4em solid transparent; /*override a*/
-  border-bottom: 1px solid transparent; /*don't underline*/
-}
+  border-right: 3.4em solid transparent;*/ /*override a*/
+  /*border-bottom: 1px solid transparent;*/ /*don't underline*/
+/*}*/
 
 /*****************************************/
 
@@ -453,12 +481,14 @@ div.highlighter-rouge code {
 .container.post > p:first-child,
 .container.post > h3:first-child,
 .container.post > p:first-child > img:first-child,
-.container.post > div.highlighter-rouge:first-child {
+.container.post > div.highlighter-rouge:first-child,
+.container.post > div:first-child {
   margin-top: 0;
 }
 .container.post > p:last-child,
 .container.post > h3:last-child,
 .container.post > p:last-child > img:last-child,
-.container.post > div.highlighter-rouge:last-child {
+.container.post > div.highlighter-rouge:last-child,
+.container.post > div:last-child {
   margin-bottom: 0;
 }

@@ -447,42 +447,23 @@ div.highlighter-rouge code {
   border: 3px solid {{page.accent_color}};
   font-weight: 900;
   text-transform: uppercase;
-  letter-spacing: 2px;
+  letter-spacing: 8px;
   font-size: 11px;
   color: {{page.accent_color}};
-  transform-origin: 0 0;
-  transform: rotate(90deg) translateY(-31px);
+  transform-origin: bottom left;
+  transform: rotate(90deg) translateX(-50px);
   padding: 4px 10px 3px 10px;
 }
 
 .top_home_button span {
-  margin-right: -2px; /* remove last letter spacing */
+  margin-right: -8px; /* remove last letter spacing */
   font-weight: inherit;
 }
 
 .top_home_button:hover {
-  transition: all 0.3s ease;
   border-bottom: 1px solid transparent; /*don't underline*/
   border: 3px solid {{page.accent_color}};
 }
-
-/*.top_home_button {
-  display: block;
-  width: 0;
-  height: 0;
-  top: 1em;
-  left: 1em;
-  position: absolute;
-  border-top: 3.4em solid {{page.text_color}};
-	border-right: 3.4em solid transparent;
-  border-bottom: 1px solid transparent;*/ /*don't underline*/
-}
-
-/*.top_home_button:hover {
-  border-top: 3.4em solid {{page.accent_color}};
-  border-right: 3.4em solid transparent;*/ /*override a*/
-  /*border-bottom: 1px solid transparent;*/ /*don't underline*/
-/*}*/
 
 /*****************************************/
 

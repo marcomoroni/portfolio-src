@@ -1,13 +1,15 @@
----
-background_color: "rgb(253, 250, 247)"
-accent_color: "rgb(255, 106, 80)"
-text_color: "#4c4c4c"
-h1_color: "#333333"
-h2_color: "#333333"
-h3_color: "#333333"
-abstract_color: "#333333"
-page_margin: "20px"
----
+:root {
+  --bg-color: rgb(253, 250, 247);
+  --selection-color: rgba(255, 106, 80, 0.2);
+  --text-color: #4c4c4c;
+  --accent-color: rgb(255, 106, 80);
+  --h1-color: #333333;
+  --h2-color: #333333;
+  --h3-color: #333333;
+  --abstract-text-color: #333333;
+
+  --page-margin: 20px;
+}
 
 * {
   margin: 0;
@@ -20,14 +22,14 @@ page_margin: "20px"
 }
 
 ::selection{
-  background: rgba(255, 106, 80, 0.2);
+  background: var(--selection-color);
 }
 
 .container {
   max-width: 46em;
   margin: auto;
-  padding-left: {{page.page_margin}};
-  padding-right: {{page.page_margin}};
+  padding-left: var(--page-margin);
+  padding-right: var(--page-margin);
 }
 
 .container > p > img {
@@ -50,11 +52,11 @@ page_margin: "20px"
 /* see bottom */
 
 body {
-  background-color: {{page.background_color}};
+  background-color: var(--bg-color);
 }
 
 h1, h2, h3, p, li {
-  color: {{page.text_color}};
+  color: var(--text-color);
   font-size: 85%;
 }
 
@@ -62,19 +64,19 @@ h1 {
   text-align: center;
   /* font-weight: 900; */
   font-size: 260%;
-  color: {{page.h1_color}};
+  color: var(--h1-color);
 }
 
 h2 {
   text-align: center;
   font-size: 180%;
-  color: {{page.h2_color}};
+  color: var(--h2-color);
   margin-bottom: 3em;
 }
 
 h3 {
   font-weight: 900;
-  color: {{page.h3_color}};
+  color: var(--h3-color);
   margin-top: 4em;
   margin-bottom: 1.5em;
 }
@@ -89,27 +91,15 @@ ul {
   padding-left: 40px;
 }
 
-/*a {
-  color: {{page.accent_color}};
-  border-bottom: 1px solid transparent;
-  transition: all 0.2s ease;
-}
-
-a:hover {
-  color: {{page.accent_color}};
-  border-color: {{page.accent_color}};
-  transition: all 0s;
-}*/
-
 a {
-  color: {{page.text_color}};
-  border-bottom: 1px solid {{page.text_color}};
+  color: var(--text-color);
+  border-bottom: 1px solid var(--text-color);
   transition: all 0.3s ease;
 }
 
 a:hover {
-  color: {{page.accent_color}};
-  border-color: {{page.accent_color}};
+  color: var(--accent-color);
+  border-color: var(--accent-color);
   transition: all 0s;
 }
 
@@ -154,7 +144,7 @@ div.highlight {
 }
 
 div.highlighter-rouge code {
-  color: {{page.text_color}}; /* same as p */
+  color: var(--text-color); /* same as p */
   font-size: 85%; /* same as p */
   font-family: 'Overpass Mono', monospace;
 }
@@ -171,7 +161,7 @@ div.highlighter-rouge code {
   transform: rotate(90deg) translateY(6em) translateX(0.4em);
 
   font-size: 63%;
-  color: {{page.text_color}};
+  color: var(--text-color);
   text-transform: uppercase;
   letter-spacing: 0.8em;
   opacity: 0.45;
@@ -204,18 +194,18 @@ div.highlighter-rouge code {
   font-size: 85%;
   white-space:pre;
   border-bottom: 1px solid transparent; /*don't underline*/
-  color: {{page.accent_color}};
+  color: var(--accent-color);
 }
 
 .button:hover {
   border-bottom: 1px solid transparent; /*don't underline*/
-  background-color: {{page.accent_color}};
+  background-color: var(--accent-color);
   color: {{page.background_color}};
 }
 
 .button.filled {
-  background-color: {{page.accent_color}};;
-  color: {{page.background_color}};
+  background-color: var(--accent-color);
+  color: var(--bg-color);
 }
 
 .button.filled:hover {
@@ -256,7 +246,7 @@ div.highlighter-rouge code {
 }
 
 .tag {
-  background-color: {{page.text_color}};
+  background-color: var(--text-color);
   padding: 0.22em 0.45em 0.24em 0.6em;
   margin-right: 0.3em;
   margin-bottom: 0.3em;
@@ -269,7 +259,7 @@ div.highlighter-rouge code {
 
 .tag p {
   font-size: 55%;
-  color: {{page.background_color}};
+  color: var(--bg-color);
   text-transform: uppercase;
   letter-spacing: 0.28em;
   transition: all 0.3s ease;
@@ -304,7 +294,7 @@ div.highlighter-rouge code {
   /* if there is an image it is set in the html */
   background-size: cover;
   background-position: center;
-  background-color: {{page.background_color}};
+  background-color: var(--bg-color);
   background-blend-mode: luminosity;
 }
 
@@ -392,7 +382,7 @@ div.highlighter-rouge code {
 .abstract p > span
 {
   font-size: 96%;
-  color: {{page.abstract_color}};
+  color: var(--abstract-text-color);
   font-family: 'courier-std', monospace;
   font-style: normal;
   font-weight: 400;
@@ -421,7 +411,7 @@ div.highlighter-rouge code {
 }
 
 .nav_dots div {
-  background-color: {{page.text_color}};
+  background-color: var(--text-color);
   opacity: 0.18;
   width: 6px;
   height: 6px;
@@ -444,12 +434,12 @@ div.highlighter-rouge code {
   top: 16px; /* 16 - smt, so that the top pos looks 16px*/
   left: 16px;
   border-bottom: 1px solid transparent; /*don't underline*/
-  border: 3px solid {{page.accent_color}};
+  border: 3px solid var(--accent-color);
   font-weight: 900;
   text-transform: uppercase;
   letter-spacing: 8px;
   font-size: 11px;
-  color: {{page.accent_color}};
+  color: var(--accent-color);
   transform-origin: bottom left;
   transform: rotate(90deg) translateX(-50px);
   padding: 4px 10px 3px 10px;
@@ -462,7 +452,7 @@ div.highlighter-rouge code {
 
 .top_home_button:hover {
   border-bottom: 1px solid transparent; /*don't underline*/
-  border: 3px solid {{page.accent_color}};
+  border: 3px solid var(--accent-color);
 }
 
 /*****************************************/

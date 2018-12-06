@@ -1,3 +1,8 @@
+@font-face {
+    font-family: courier;
+    src: url('../assets/Courier_Stylus_Regular.ttf') format('ttf');
+}
+
 :root {
   --bg-color: rgb(253, 250, 247);
   --selection-color: rgba(255, 106, 80, 0.2);
@@ -383,7 +388,7 @@ div.highlighter-rouge code {
 {
   font-size: 96%;
   color: var(--abstract-text-color);
-  font-family: 'courier-std', monospace;
+  font-family: courier, monospace;
   font-style: normal;
   font-weight: 400;
   transition: all 0.2s ease;
@@ -508,6 +513,3 @@ div.highlighter-rouge code {
 }
 
 /*****************************************/
-
-
-/* to do: add abstract font properly */

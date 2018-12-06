@@ -98,7 +98,7 @@ a {
 }
 
 a:hover {
-  color: var(--accent-color);
+  color: var(--bg-color);
   border-color: var(--accent-color);
   transition: all 0s;
 }
@@ -474,3 +474,38 @@ div.highlighter-rouge code {
 .container.post > div:last-child {
   margin-bottom: 0;
 }
+
+
+
+/* MODAL *********************************/
+
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  background-color: rgba(253, 250, 247, 0.96); /* Black w/ opacity */
+  cursor: zoom-out;
+  background-image: url('../assets/modal_dot.png');
+  background-repeat: repeat;
+  background-position: center;
+}
+
+.modal-content {
+  margin: 0;
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: calc(100vw - var(--page-margin) * 2);
+  max-height: calc(100vh - var(--page-margin) * 2);
+}
+
+/*****************************************/
+
+
+/* to do: add abstract font properly, fix typo, home button bigger */

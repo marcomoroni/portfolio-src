@@ -98,7 +98,7 @@ a {
 }
 
 a:hover {
-  color: var(--bg-color);
+  color: var(--accent-color);
   border-color: var(--accent-color);
   transition: all 0s;
 }
@@ -200,7 +200,7 @@ div.highlighter-rouge code {
 .button:hover {
   border-bottom: 1px solid transparent; /*don't underline*/
   background-color: var(--accent-color);
-  color: {{page.background_color}};
+  color: var(--bg-color);
 }
 
 .button.filled {
@@ -437,17 +437,18 @@ div.highlighter-rouge code {
   border: 3px solid var(--accent-color);
   font-weight: 900;
   text-transform: uppercase;
-  letter-spacing: 8px;
+  letter-spacing: 11px;
   font-size: 11px;
   color: var(--accent-color);
   transform-origin: bottom left;
-  transform: rotate(90deg) translateX(-50px);
-  padding: 4px 10px 3px 10px;
+  transform: rotate(90deg) translateX(-64px);
+  padding: 9px 15px 8px 15px;
 }
 
 .top_home_button span {
-  margin-right: -8px; /* remove last letter spacing */
+  margin-right: -11px; /* remove last letter spacing */
   font-weight: inherit;
+  line-height: 198%;
 }
 
 .top_home_button:hover {
@@ -487,11 +488,11 @@ div.highlighter-rouge code {
   top: 0;
   width: 100%; /* Full width */
   height: 100%; /* Full height */
-  background-color: rgba(253, 250, 247, 0.96); /* Black w/ opacity */
+  background-color: rgba(253, 250, 247, 0.9); /* Black w/ opacity */
   cursor: zoom-out;
-  background-image: url('../assets/modal_dot.png');
+  /*background-image: url('../assets/modal_dot.png');
   background-repeat: repeat;
-  background-position: center;
+  background-position: center;*/
 }
 
 .modal-content {
@@ -503,9 +504,10 @@ div.highlighter-rouge code {
   transform: translate(-50%, -50%);
   max-width: calc(100vw - var(--page-margin) * 2);
   max-height: calc(100vh - var(--page-margin) * 2);
+  /* border: 3px solid var(--bg-color); so dots don't touch the picture */
 }
 
 /*****************************************/
 
 
-/* to do: add abstract font properly, fix typo, home button bigger */
+/* to do: add abstract font properly */

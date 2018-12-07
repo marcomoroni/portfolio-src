@@ -1,6 +1,6 @@
 @font-face {
-    font-family: courier;
-    src: url('../assets/Courier_Stylus_Regular.ttf') format('ttf');
+    font-family: courier-prime;
+    src: url('../assets/courier-prime.regular.ttf') format('ttf');
 }
 
 :root {
@@ -263,7 +263,7 @@ div.highlighter-rouge code {
 }
 
 .tag p {
-  font-size: 55%;
+  font-size: 60%;
   color: var(--bg-color);
   text-transform: uppercase;
   letter-spacing: 0.28em;
@@ -380,15 +380,13 @@ div.highlighter-rouge code {
 .abstract {
   margin: auto;
   max-width: 380px;
-  font-size: 110%;
 }
 
 .abstract p,
-.abstract p > span
-{
-  font-size: 96%;
+.abstract p > span {
+  font-size: 115%;
   color: var(--abstract-text-color);
-  font-family: courier, monospace;
+  font-family: courier-prime, monospace;
   font-style: normal;
   font-weight: 400;
   transition: all 0.2s ease;

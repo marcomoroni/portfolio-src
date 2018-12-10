@@ -121,6 +121,42 @@ sup {
 }
 
 
+
+/* TOP HOME BUTTON ***********************/
+
+.top_home_button {
+  display: none;
+  position: fixed;
+  top: 16px; /* 16 - smt, so that the top pos looks 16px*/
+  left: 16px;
+  border-bottom: 1px solid transparent; /*don't underline*/
+  border: 3px solid var(--accent-color);
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 11px;
+  font-size: 11px;
+  color: var(--accent-color);
+  transform-origin: bottom left;
+  transform: rotate(90deg) translateX(-64px);
+  padding: 9px 15px 8px 15px;
+  display: block;
+}
+
+.top_home_button span {
+  margin-right: -11px; /* remove last letter spacing */
+  font-weight: inherit;
+  line-height: 198%;
+}
+
+.top_home_button:hover {
+  border-bottom: 1px solid transparent; /*don't underline*/
+  border: 3px solid var(--accent-color);
+}
+
+/*****************************************/
+
+
+
 /* CODE **********************************/
 
 .highlighter-rouge {
@@ -252,7 +288,7 @@ div.highlighter-rouge code {
 
 .tag {
   background-color: var(--text-color);
-  padding: 0.22em 0.45em 0.24em 0.6em;
+  padding: 0.26em 0.47em 0.24em 0.62em;
   margin-right: 0.3em;
   margin-bottom: 0.3em;
   transition: all 0.3s ease;
@@ -263,7 +299,7 @@ div.highlighter-rouge code {
 }
 
 .tag p {
-  font-size: 60%;
+  font-size: 57%;
   color: var(--bg-color);
   text-transform: uppercase;
   letter-spacing: 0.28em;
@@ -384,7 +420,7 @@ div.highlighter-rouge code {
 
 .abstract p,
 .abstract p > span {
-  font-size: 115%;
+  font-size: 110%;
   color: var(--abstract-text-color);
   font-family: courier-prime, monospace;
   font-style: normal;
@@ -424,39 +460,6 @@ div.highlighter-rouge code {
 
 .nav_dots .current {
   opacity: 1;
-}
-
-/*****************************************/
-
-
-/* TOP HOME BUTTON ***********************/
-
-.top_home_button {
-  display: block;
-  position: fixed;
-  top: 16px; /* 16 - smt, so that the top pos looks 16px*/
-  left: 16px;
-  border-bottom: 1px solid transparent; /*don't underline*/
-  border: 3px solid var(--accent-color);
-  font-weight: 900;
-  text-transform: uppercase;
-  letter-spacing: 11px;
-  font-size: 11px;
-  color: var(--accent-color);
-  transform-origin: bottom left;
-  transform: rotate(90deg) translateX(-64px);
-  padding: 9px 15px 8px 15px;
-}
-
-.top_home_button span {
-  margin-right: -11px; /* remove last letter spacing */
-  font-weight: inherit;
-  line-height: 198%;
-}
-
-.top_home_button:hover {
-  border-bottom: 1px solid transparent; /*don't underline*/
-  border: 3px solid var(--accent-color);
 }
 
 /*****************************************/

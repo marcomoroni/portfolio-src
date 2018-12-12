@@ -477,9 +477,6 @@ div.highlighter-rouge code {
   height: 100%; /* Full height */
   background-color: rgba(253, 250, 247, 0.9); /* Black w/ opacity */
   cursor: zoom-out;
-  /*background-image: url('../assets/modal_dot.png');
-  background-repeat: repeat;
-  background-position: center;*/
 }
 
 .modal-content {
@@ -491,7 +488,6 @@ div.highlighter-rouge code {
   transform: translate(-50%, -50%);
   max-width: calc(100% - var(--page-margin) * 2);
   max-height: calc(100% - var(--page-margin) * 2);
-  /* border: 3px solid var(--bg-color); so dots don't touch the picture */
 }
 
 /*****************************************/

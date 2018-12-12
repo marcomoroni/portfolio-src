@@ -489,8 +489,8 @@ div.highlighter-rouge code {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  max-width: calc(100vw - var(--page-margin) * 2);
-  max-height: calc(100vh - var(--page-margin) * 2);
+  max-width: calc(100% - var(--page-margin) * 2);
+  max-height: calc(100% - var(--page-margin) * 2);
   /* border: 3px solid var(--bg-color); so dots don't touch the picture */
 }
 

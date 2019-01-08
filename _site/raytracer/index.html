@@ -23,15 +23,15 @@
     
   
     
-    <div></div>
-    
-  
-    
-    <div></div>
-    
-  
-    
     <div class="current"></div>
+    
+  
+    
+    <div></div>
+    
+  
+    
+    <div></div>
     
   
     
@@ -68,7 +68,12 @@
 
     
       <div class="tag">
-  <p>games dev</p>
+  <p>graphics</p>
+</div>
+
+    
+      <div class="tag">
+  <p>parallel programming</p>
 </div>
 
     
@@ -80,7 +85,7 @@
   </div>
   <div class="abstract">
   
-  <p>Azucena: a game built on a C++ engine.<!-- <span class="favourite_gliph">&#x2606;</span>--></p>
+  <p>A parallel ray tracer.</p>
   
 </div>
 
@@ -93,23 +98,28 @@
 
   
 
-  <p><em>Azucena</em> has been my first complete game. <a href="https://marcomoroni.github.io/azucena/">This is its website</a>!</p>
+  <p><img src="/portfolio/assets/raytracer/ray02.jpg" alt="" /></p>
 
-<p>I made this game as a university coursework, and the project included a pitch presentation and a game design document.</p>
+<p>Future shines bright for ray tracers, and although the theory behind them is fairly simple, they are magnificently <em>slow</em>.</p>
 
-<p>I took inspiration mainly from two games: <em>The Legend of Zelda</em> and <em><a href="http://www.heart-machine.com/">Hyper Light Drifter</a></em>. You play as Azucena, a llama who has to rescue her three babies. Each of them is waiting at the end of a level and the levels can be visited in any order.</p>
+<!--<div style="background-color: red; height: 40px; width: calc(100vw - 40px); position: relative; left: 50%; margin-left: calc(-50vw + 20px); margin-bottom: 2.8em; margin-top: 2.8em;">
+</div>-->
 
-<p><img src="/portfolio/assets/azucena/capture_01.png" alt="" /></p>
+<p>I investigated different parallelization ways to speed up a path tracer. I used <em><a href="http://www.kevinbeason.com/smallpt/">smallpt</a></em> as a base, but to keep it as simple as possible I removed unnecessary features such as pixel subdivision and tent filter.</p>
 
-<p>It runs on an engine built from scratch in C++, with the help of <a href="https://www.sfml-dev.org/">SFML</a> and <a href="https://github.com/erincatto/Box2D">Box2D</a>. The pieces are the same you would expect to find in any game engine: scenes, entities, components, etc. The game has all the basic technical features necessary to consider a game <em>a game</em>, for example: a menu, save and load, a tutorial, an ending, sounds and music, support for different screen resolutions, remappable controls and joystick support.</p>
+<p>The two methods that I implemented are <a href="https://www.openmp.org/">OpenMP</a> for CPU parallelization and <a href="https://developer.nvidia.com/cuda-zone">CUDA</a> for GPU parallelization. They both target the loop that iterates through all the pixels.</p>
 
-<p>The source code is <a href="https://github.com/marcomoroni/azucena">here</a>.</p>
+<p>You can already find an OpenMP in <em>samllpt</em>, and it consists in one single line. CUDA implementation took a bit more effort, especially because when you put too much data into the GPU there’s no easy way to tell whether it’s going to crash. It just happens.</p>
 
-<p><img src="/portfolio/assets/azucena/capture_04.png" alt="" /></p>
+<p>By the end, an image with a resolution of 1024 × 768 pixels with 100 samples per pixel took:</p>
 
-<p><img src="/portfolio/assets/azucena/capture_02.png" alt="" /></p>
+<ul>
+  <li>94 seconds with sequential code</li>
+  <li>15 seconds with OpenMP</li>
+  <li>2 seconds with CUDA</li>
+</ul>
 
-<p><img src="/portfolio/assets/azucena/capture_03.png" alt="" /></p>
+<p>The repo is <a href="https://github.com/marcomoroni/set10108">here</a> and it also contains a detailed report of the work.</p>
 
 
   <div class="bottom_navigation_buttons">
@@ -129,7 +139,7 @@ normal / nil : accent colour, no background when no hover
 important : accent colour, backround when no hover -->
 
 
-  <a class=button href=/portfolio/lens-vr/>Next   &#10230;</a>
+  <a class=button href=/portfolio/clock/>Next   &#10230;</a>
 
 
     
@@ -148,7 +158,7 @@ important : accent colour, backround when no hover -->
   {
     if (ps[i].getElementsByTagName("img").length < 1)
     {
-      var txt = "May 2018"
+      var txt = "December 2018"
       
       txt += "\xa0\xa0\xa0&#92;&#92;&#92;\xa0\xa0\xa0";
 

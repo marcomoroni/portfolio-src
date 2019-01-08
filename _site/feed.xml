@@ -1,4 +1,51 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.2">Jekyll</generator><link href="http://localhost:4000/portfolio/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/portfolio/" rel="alternate" type="text/html" /><updated>2018-12-13T23:46:00+00:00</updated><id>http://localhost:4000/portfolio/</id><title type="html">Marco Moroni</title><subtitle>Ciao, here's my portfolio.</subtitle><entry><title type="html">Clock</title><link href="http://localhost:4000/portfolio/clock/" rel="alternate" type="text/html" title="Clock" /><published>2018-09-09T00:00:00+01:00</published><updated>2018-09-09T00:00:00+01:00</updated><id>http://localhost:4000/portfolio/clock</id><content type="html" xml:base="http://localhost:4000/portfolio/clock/">&lt;p&gt;&lt;img src=&quot;/portfolio/assets/clock/clock-sand.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.2">Jekyll</generator><link href="http://localhost:4000/portfolio/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/portfolio/" rel="alternate" type="text/html" /><updated>2019-01-08T20:24:02+00:00</updated><id>http://localhost:4000/portfolio/</id><title type="html">Marco Moroni</title><subtitle>Ciao, here's my portfolio.</subtitle><entry><title type="html">Tabletop</title><link href="http://localhost:4000/portfolio/tabletop/" rel="alternate" type="text/html" title="Tabletop" /><published>2018-12-19T00:00:00+00:00</published><updated>2018-12-19T00:00:00+00:00</updated><id>http://localhost:4000/portfolio/tabletop</id><content type="html" xml:base="http://localhost:4000/portfolio/tabletop/">&lt;p&gt;This is a tabletop engine made with &lt;a href=&quot;https://unity3d.com/&quot;&gt;Unity&lt;/a&gt;: a player can drag-and-drop cards across different &lt;em&gt;decks&lt;/em&gt; (a &lt;em&gt;deck&lt;/em&gt; is considered a collection of cards that can be laid down in different ways). A developer should be able to easily set up a scene for any board game (not &lt;em&gt;any&lt;/em&gt; but you get the point). To help out developers I built some tools to arrange the scene using the powerful feature of the Unity Editor.&lt;/p&gt;
+
+&lt;p&gt;The Unity Package with a short guide is &lt;a href=&quot;https://github.com/marcomoroni/set10110&quot;&gt;on GitHub&lt;/a&gt;. It’s not &lt;em&gt;complete&lt;/em&gt;, but it should work for simple games.&lt;/p&gt;
+
+&lt;h3 id=&quot;tabletop-engine&quot;&gt;Tabletop engine&lt;/h3&gt;
+
+&lt;p&gt;The engine based around two concepts: &lt;em&gt;cards&lt;/em&gt; and &lt;em&gt;decks&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;A deck takes a &lt;code class=&quot;highlighter-rouge&quot;&gt;TabletopDeckStyle&lt;/code&gt; Scriptable Object as a parameter: it contains the data on how the cards should be placed on the table. &lt;code class=&quot;highlighter-rouge&quot;&gt;TabletopDeckStyle&lt;/code&gt; can be a line or a circle and from the Inspector is possible to change many variable, for example the gap between cards, the max scatter (position and angle), the alignment, etc.&lt;/p&gt;
+
+&lt;p&gt;Cards can be moved around with your cursor or by using simple functions like &lt;code class=&quot;highlighter-rouge&quot;&gt;AddCard()&lt;/code&gt; or &lt;code class=&quot;highlighter-rouge&quot;&gt;AddCards()&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/portfolio/assets/tabletop/engine01.gif&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;developer-tools&quot;&gt;Developer tools&lt;/h3&gt;
+
+&lt;p&gt;I build a handy Editor Window to manage the cards that will be added to the scene; it was soon clear that that was most necessary tool to have, otherwise every card should have been changed individually. It consists on a database where cards can be added, deleted or duplicated. Once they are ready you only need to click on “Update Scene” to create the cards. The &lt;em&gt;default&lt;/em&gt; values are the ones a new card will have when added. For example, if every card has the same back sprite, set it as default, and every new card will have it.&lt;/p&gt;
+
+&lt;p&gt;Decks have Gizmos to show where cards will be placed once in Game mode. These are always visible and if a deck is selected the gizmos will change color.&lt;/p&gt;
+
+&lt;p&gt;Also, all Inspectors are custom made to allow more functionalities and better UI.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/portfolio/assets/tabletop/database.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/portfolio/assets/tabletop/inspector.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/portfolio/assets/tabletop/gizmos.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;</content><author><name></name></author><category term="tools dev" /><category term="games dev" /><category term="unity" /><summary type="html">This is a tabletop engine made with Unity: a player can drag-and-drop cards across different decks (a deck is considered a collection of cards that can be laid down in different ways). A developer should be able to easily set up a scene for any board game (not any but you get the point). To help out developers I built some tools to arrange the scene using the powerful feature of the Unity Editor.</summary></entry><entry><title type="html">Ray Tracer</title><link href="http://localhost:4000/portfolio/raytracer/" rel="alternate" type="text/html" title="Ray Tracer" /><published>2018-12-18T00:00:00+00:00</published><updated>2018-12-18T00:00:00+00:00</updated><id>http://localhost:4000/portfolio/ray-tracer</id><content type="html" xml:base="http://localhost:4000/portfolio/raytracer/">&lt;p&gt;&lt;img src=&quot;/portfolio/assets/raytracer/ray02.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Future shines bright for ray tracers, and although the theory behind them is fairly simple, they are magnificently &lt;em&gt;slow&lt;/em&gt;.&lt;/p&gt;
+
+&lt;!--&lt;div style=&quot;background-color: red; height: 40px; width: calc(100vw - 40px); position: relative; left: 50%; margin-left: calc(-50vw + 20px); margin-bottom: 2.8em; margin-top: 2.8em;&quot;&gt;
+&lt;/div&gt;--&gt;
+
+&lt;p&gt;I investigated different parallelization ways to speed up a path tracer. I used &lt;em&gt;&lt;a href=&quot;http://www.kevinbeason.com/smallpt/&quot;&gt;smallpt&lt;/a&gt;&lt;/em&gt; as a base, but to keep it as simple as possible I removed unnecessary features such as pixel subdivision and tent filter.&lt;/p&gt;
+
+&lt;p&gt;The two methods that I implemented are &lt;a href=&quot;https://www.openmp.org/&quot;&gt;OpenMP&lt;/a&gt; for CPU parallelization and &lt;a href=&quot;https://developer.nvidia.com/cuda-zone&quot;&gt;CUDA&lt;/a&gt; for GPU parallelization. They both target the loop that iterates through all the pixels.&lt;/p&gt;
+
+&lt;p&gt;You can already find an OpenMP in &lt;em&gt;samllpt&lt;/em&gt;, and it consists in one single line. CUDA implementation took a bit more effort, especially because when you put too much data into the GPU there’s no easy way to tell whether it’s going to crash. It just happens.&lt;/p&gt;
+
+&lt;p&gt;By the end, an image with a resolution of 1024 × 768 pixels with 100 samples per pixel took:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;94 seconds with sequential code&lt;/li&gt;
+  &lt;li&gt;15 seconds with OpenMP&lt;/li&gt;
+  &lt;li&gt;2 seconds with CUDA&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;The repo is &lt;a href=&quot;https://github.com/marcomoroni/set10108&quot;&gt;here&lt;/a&gt; and it also contains a detailed report of the work.&lt;/p&gt;</content><author><name></name></author><category term="graphics" /><category term="parallel programming" /><summary type="html"></summary></entry><entry><title type="html">Clock</title><link href="http://localhost:4000/portfolio/clock/" rel="alternate" type="text/html" title="Clock" /><published>2018-09-09T00:00:00+01:00</published><updated>2018-09-09T00:00:00+01:00</updated><id>http://localhost:4000/portfolio/clock</id><content type="html" xml:base="http://localhost:4000/portfolio/clock/">&lt;p&gt;&lt;img src=&quot;/portfolio/assets/clock/clock-sand.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;/portfolio/assets/clock/clock-sky.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 

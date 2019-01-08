@@ -19,19 +19,19 @@
   <div class="nav_dots">
   
     
-    <div></div>
-    
-  
-    
-    <div></div>
-    
-  
-    
-    <div></div>
-    
-  
-    
     <div class="current"></div>
+    
+  
+    
+    <div></div>
+    
+  
+    
+    <div></div>
+    
+  
+    
+    <div></div>
     
   
     
@@ -68,7 +68,17 @@
 
     
       <div class="tag">
+  <p>tools dev</p>
+</div>
+
+    
+      <div class="tag">
   <p>games dev</p>
+</div>
+
+    
+      <div class="tag">
+  <p>unity</p>
 </div>
 
     
@@ -80,7 +90,7 @@
   </div>
   <div class="abstract">
   
-  <p>Azucena: a game built on a C++ engine.<!-- <span class="favourite_gliph">&#x2606;</span>--></p>
+  <p>A tabletop engine with a focus on tools for developers.</p>
   
 </div>
 
@@ -93,23 +103,33 @@
 
   
 
-  <p><em>Azucena</em> has been my first complete game. <a href="https://marcomoroni.github.io/azucena/">This is its website</a>!</p>
+  <p>This is a tabletop engine made with <a href="https://unity3d.com/">Unity</a>: a player can drag-and-drop cards across different <em>decks</em> (a <em>deck</em> is considered a collection of cards that can be laid down in different ways). A developer should be able to easily set up a scene for any board game (not <em>any</em> but you get the point). To help out developers I built some tools to arrange the scene using the powerful feature of the Unity Editor.</p>
 
-<p>I made this game as a university coursework, and the project included a pitch presentation and a game design document.</p>
+<p>The Unity Package with a short guide is <a href="https://github.com/marcomoroni/set10110">on GitHub</a>. It’s not <em>complete</em>, but it should work for simple games.</p>
 
-<p>I took inspiration mainly from two games: <em>The Legend of Zelda</em> and <em><a href="http://www.heart-machine.com/">Hyper Light Drifter</a></em>. You play as Azucena, a llama who has to rescue her three babies. Each of them is waiting at the end of a level and the levels can be visited in any order.</p>
+<h3 id="tabletop-engine">Tabletop engine</h3>
 
-<p><img src="/portfolio/assets/azucena/capture_01.png" alt="" /></p>
+<p>The engine based around two concepts: <em>cards</em> and <em>decks</em>.</p>
 
-<p>It runs on an engine built from scratch in C++, with the help of <a href="https://www.sfml-dev.org/">SFML</a> and <a href="https://github.com/erincatto/Box2D">Box2D</a>. The pieces are the same you would expect to find in any game engine: scenes, entities, components, etc. The game has all the basic technical features necessary to consider a game <em>a game</em>, for example: a menu, save and load, a tutorial, an ending, sounds and music, support for different screen resolutions, remappable controls and joystick support.</p>
+<p>A deck takes a <code class="highlighter-rouge">TabletopDeckStyle</code> Scriptable Object as a parameter: it contains the data on how the cards should be placed on the table. <code class="highlighter-rouge">TabletopDeckStyle</code> can be a line or a circle and from the Inspector is possible to change many variable, for example the gap between cards, the max scatter (position and angle), the alignment, etc.</p>
 
-<p>The source code is <a href="https://github.com/marcomoroni/azucena">here</a>.</p>
+<p>Cards can be moved around with your cursor or by using simple functions like <code class="highlighter-rouge">AddCard()</code> or <code class="highlighter-rouge">AddCards()</code>.</p>
 
-<p><img src="/portfolio/assets/azucena/capture_04.png" alt="" /></p>
+<p><img src="/portfolio/assets/tabletop/engine01.gif" alt="" /></p>
 
-<p><img src="/portfolio/assets/azucena/capture_02.png" alt="" /></p>
+<h3 id="developer-tools">Developer tools</h3>
 
-<p><img src="/portfolio/assets/azucena/capture_03.png" alt="" /></p>
+<p>I build a handy Editor Window to manage the cards that will be added to the scene; it was soon clear that that was most necessary tool to have, otherwise every card should have been changed individually. It consists on a database where cards can be added, deleted or duplicated. Once they are ready you only need to click on “Update Scene” to create the cards. The <em>default</em> values are the ones a new card will have when added. For example, if every card has the same back sprite, set it as default, and every new card will have it.</p>
+
+<p>Decks have Gizmos to show where cards will be placed once in Game mode. These are always visible and if a deck is selected the gizmos will change color.</p>
+
+<p>Also, all Inspectors are custom made to allow more functionalities and better UI.</p>
+
+<p><img src="/portfolio/assets/tabletop/database.png" alt="" /></p>
+
+<p><img src="/portfolio/assets/tabletop/inspector.png" alt="" /></p>
+
+<p><img src="/portfolio/assets/tabletop/gizmos.png" alt="" /></p>
 
 
   <div class="bottom_navigation_buttons">
@@ -129,7 +149,7 @@ normal / nil : accent colour, no background when no hover
 important : accent colour, backround when no hover -->
 
 
-  <a class=button href=/portfolio/lens-vr/>Next   &#10230;</a>
+  <a class=button href=/portfolio/raytracer/>Next   &#10230;</a>
 
 
     
@@ -148,7 +168,7 @@ important : accent colour, backround when no hover -->
   {
     if (ps[i].getElementsByTagName("img").length < 1)
     {
-      var txt = "May 2018"
+      var txt = "December 2018"
       
       txt += "\xa0\xa0\xa0&#92;&#92;&#92;\xa0\xa0\xa0";
 

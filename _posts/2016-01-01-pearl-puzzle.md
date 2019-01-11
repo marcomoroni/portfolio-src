@@ -20,4 +20,4 @@ You can download this tiny game from my [GitHub](https://github.com/MarcoMoroni/
 
 ![]({{ site.baseurl }}{{ page.assets_folder }}/screen01.png)
 
-![]({{ site.baseurl }}{{ page.assets_folder }}/screen01.png)
+![]({{ site.baseurl }}{{ page.assets_folder }}/screen02.png)

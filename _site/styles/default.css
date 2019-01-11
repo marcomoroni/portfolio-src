@@ -353,7 +353,7 @@ div.highlighter-rouge code {
 
 .blog_list_post:hover .overlay {
   /* background-color: {{page.accent_color}}; */
-  opacity: 0.95;
+  opacity: 1;
   transition: all 0s;
 }
 

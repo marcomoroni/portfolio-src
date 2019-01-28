@@ -150,7 +150,8 @@ sup {
 
 p .highlighter-rouge,
 li .highlighter-rouge {
-  padding: 3px 5px 3px 5px;
+  padding: 6px 5px 3px 5px;
+  /* padding: 3px 5px 3px 5px; better on mac :/ */
 }
 
 div.highlighter-rouge{

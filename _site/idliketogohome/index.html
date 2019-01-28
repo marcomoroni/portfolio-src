@@ -107,17 +107,25 @@
 
   
 
-  <p>I made <em>I’d like to go home</em> during the 48h of the <a href="https://globalgamejam.org/">Global Game Jam</a> 2019. <a href="https://marcomoroni.itch.io/id-like-to-go-home">Play it on itch.io</a>!</p>
+  <p><img src="/portfolio/assets/idliketogohome/h1.png" alt="" />
+<img src="/portfolio/assets/idliketogohome/h2.png" alt="" />
+<img src="/portfolio/assets/idliketogohome/h3.png" alt="" /></p>
+
+<p>I made <em>I’d like to go home</em> during the 48h of the <a href="https://globalgamejam.org/">Global Game Jam</a> 2019. <a href="https://marcomoroni.itch.io/id-like-to-go-home">Play it on itch.io</a>!</p>
 
 <p>This year I decided to go all solo: I draw the assets and I used <a href="https://unity3d.com/">Unity</a> to build it. It’s made with 2D sprites in a 3D side-scrolling scene.</p>
 
-<p>It’s a short story about a rabbit that lost his way home. My attention was all on the <em>feelings</em> and <em>immersion</em> of the player and the art-style was inspired by <a href="http://jonklassen.tumblr.com/">Jon Klassen</a>—for the characters and the story—and <a href="https://galshir.com/">Gal Shir</a>—for the colurs and the vegetation.</p>
+<p>It’s a short story about a rabbit that lost his way home. My attention was all on the <em>feelings</em> and <em>immersion</em> of the player and the art-style was inspired by <a href="http://jonklassen.tumblr.com/">Jon Klassen</a>—for the characters and the story—and <a href="https://galshir.com/">Gal Shir</a>—for the colours and the vegetation.</p>
+
+<p>Some technical insights:</p>
+<ul>
+  <li>The background seems to be of one solid dark purple: the 3D plane on the ground has a shader that outputs a solid colour that is not affected by anything (just like a sprite) and the camera outputs the same colour when there are no elements on the screen. In this way you cannot see where the plane ends, and it gives the impression of a consistent colour.</li>
+  <li>The camera is controlled by Unity’s Cinemachine and it has a noise and vignette post-processing effect.</li>
+  <li>The sprites are generally made in two steps: first, draw the basic shape with a solid colour; second, use a sand/spray brush to add a secondary colour.</li>
+  <li>There is what seems to be a 3D model of a home: at the time of writing I don’t know how to 3D model, so I simply assembled it with some sprites (<em>hehe</em>).</li>
+</ul>
 
 <p>All the code is in <a href="https://github.com/marcomoroni/ggj-2019">here</a>, and you play online <a href="https://marcomoroni.itch.io/id-like-to-go-home">on itch.io</a>.</p>
-
-<p><img src="/portfolio/assets/idliketogohome/h1.png" alt="" />
-<img src="/portfolio/assets/idliketogohome/h2.png" alt="" />
-<img src="/portfolio/assets/idliketogohome/h3.png" alt="" /></p>
 
 
   <div class="bottom_navigation_buttons">

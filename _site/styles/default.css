@@ -354,7 +354,7 @@ div.highlighter-rouge code {
   width: 800px;
   transform: translateY(-320px) translateX(280px) rotate(45deg);
   transform-origin: top left;
-  transition: all 0.3s ease;
+  transition: opacity 0.3s ease, transform 0.6s;
 }
 
 .blog_list_post > .post_link_cover {
@@ -390,7 +390,7 @@ div.highlighter-rouge code {
 
 .post_preview_reveal:hover ~ .overlay {
   transform: translateY(calc(-320px - 550px)) translateX(calc(280px - 550px)) rotate(45deg);
-  transition: transform 0.5s ease;
+  transition: transform 0.6s ease;
 }
 
 .post_link_cover:hover ~ .preview_img,
@@ -405,7 +405,7 @@ div.highlighter-rouge code {
 }
 
 .abstract, .tags_list {
-  transition: opacity 0.3s ease 0.15s;
+  transition: opacity 0.3s ease 0.22s;
 }
 
 /*.blog_list_post:hover p {

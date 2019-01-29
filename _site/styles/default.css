@@ -432,13 +432,13 @@ div.highlighter-rouge code {
 }
 
 /* If only one column */
-@media screen and (max-width: 84.8em) {
+/*@media screen and (max-width: 84.8em) {
 
   .blog_list_post {
     width: 46em;
   }
 
-}
+}*/
 
 /*****************************************/
 

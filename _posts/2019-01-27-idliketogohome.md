@@ -22,4 +22,4 @@ Some technical insights:
 * The sprites are generally made in two steps: first, draw the basic shape with a solid colour; second, use a sand/spray brush to add a secondary colour.
 * There is what seems to be a 3D model of a home: at the time of writing I don't know how to 3D model, so I simply assembled it with some sprites (*hehe*).
 
-All the code is in [here](https://github.com/marcomoroni/ggj-2019), and you play online [on itch.io](https://marcomoroni.itch.io/id-like-to-go-home).
+All the code is in [here](https://github.com/marcomoroni/ggj-2019), and you can [play it online on itch.io](https://marcomoroni.itch.io/id-like-to-go-home).

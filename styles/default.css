@@ -319,6 +319,20 @@ div.highlighter-rouge code {
   background-position: center;
   background-color: var(--bg-color);
   background-blend-mode: luminosity;
+
+  overflow:  hidden;
+}
+
+/* same as .blog_list_post */
+.blog_list_post .preview_img {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+  background-color: #f2ece6;
+  transition: opacity 0.3s ease;
 }
 
 /* for correct z index */
@@ -334,28 +348,64 @@ div.highlighter-rouge code {
   position: absolute;
   background-color: #f2ece6;
   opacity: 0.9;
-  height: inherit;
-  width: 100%;
+  /*height: inherit;
+  width: 100%;*/
+  height: 800px;
+  width: 800px;
+  transform: translateY(-320px) translateX(280px) rotate(45deg);
+  transform-origin: top left;
   transition: all 0.3s ease;
 }
 
-.blog_list_post > a {
+.blog_list_post > .post_link_cover {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
   border-bottom: 0px solid transparent; /*don't underline*/
+  z-index: 19;
 }
 
-.blog_list_post > a:hover {
+.blog_list_post > .post_preview_reveal {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 70px;
+  height: 70px;
+  border-bottom: 0px solid transparent; /*don't underline*/
+  z-index: 20;
+}
+
+.blog_list_post > .post_link_cover:hover {
   border-bottom: 0px solid transparent; /*don't underline*/
 }
 
 .blog_list_post:hover .overlay {
   /* background-color: {{page.accent_color}}; */
   opacity: 1;
-  transition: all 0s;
+  transform: translateY(calc(-320px - 70px)) translateX(calc(280px - 70px)) rotate(45deg);
+  transition: transform 0.4s ease, opacity 0.2s;
+}
+
+.post_preview_reveal:hover ~ .overlay {
+  transform: translateY(calc(-320px - 550px)) translateX(calc(280px - 550px)) rotate(45deg);
+  transition: transform 0.5s ease;
+}
+
+.post_link_cover:hover ~ .preview_img,
+.post_preview_reveal:hover ~ .preview_img {
+  opacity: 1;
+}
+
+.post_preview_reveal:hover ~ .abstract,
+.post_preview_reveal:hover ~ div > .tags_list {
+  opacity: 0;
+  transition: opacity 0.1s ease;
+}
+
+.abstract, .tags_list {
+  transition: opacity 0.3s ease 0.15s;
 }
 
 /*.blog_list_post:hover p {

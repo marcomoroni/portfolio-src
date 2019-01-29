@@ -26,6 +26,10 @@ layout: default
 
     <div class="blog_list_post" style="{% if post.preview_img %}background-image: url({{ site.baseurl }}{{ post.preview_img }});{% endif %}">
 
+      {% if post.preview_img %}<a class="post_preview_reveal" href="{{ site.baseurl }}{{ post.url }}"></a>{% endif %}
+      <a class="post_link_cover" href="{{ site.baseurl }}{{ post.url }}"></a>
+      <div class="preview_img" style="{% if post.preview_img %}background-image: url({{ site.baseurl }}{{ post.preview_img }});{% endif %}"></div>
+
       <!-- <div class="overlay" style="{% if post.preview_img == nil %}opacity: 0;{% endif %}"></div> -->
       <div class="overlay"></div>
 
@@ -37,7 +41,9 @@ layout: default
 
       {% include abstract.html post=post %}
 
-      <a class="post_link_cover" href="{{ site.baseurl }}{{ post.url }}"></a>
+
+
+
 
     </div>
 

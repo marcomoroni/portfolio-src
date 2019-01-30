@@ -10,7 +10,7 @@ preview_img: "/assets/idliketogohome/h1.png"
 ![]({{ site.baseurl }}{{ page.assets_folder }}/h2.png)
 ![]({{ site.baseurl }}{{ page.assets_folder }}/h3.png)
 
-I made *I'd like to go home* during the 48h of the [Global Game Jam](https://globalgamejam.org/) 2019. [Play it on itch.io](https://marcomoroni.itch.io/id-like-to-go-home)!
+I made *I'd like to go home* during the 48h of the [Global Game Jam](https://globalgamejam.org/) 2019. [Play it on itch.io!](https://marcomoroni.itch.io/id-like-to-go-home)
 
 This year I decided to go all solo: I draw the assets and I used [Unity](https://unity3d.com/) to build it. It's made with 2D sprites in a 3D side-scrolling scene.
 

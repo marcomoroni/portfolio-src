@@ -391,7 +391,7 @@ div.highlighter-rouge code {
 
 .post_preview_reveal:hover ~ .overlay {
   transform: translateY(calc(-320px - 550px)) translateX(calc(280px - 550px)) rotate(45deg);
-  transition: transform 0.6s ease;
+  transition: transform 0.6s ease, opacity 0.2s;
 }
 
 .post_link_cover:hover ~ .preview_img,

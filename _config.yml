@@ -21,7 +21,7 @@ url: "" # the base hostname & protocol for your site, e.g. http://example.com
 # http://downtothewire.io/2015/08/15/configuring-jekyll-for-user-and-project-github-pages/
 github_username: marcomoroni
 itchio_username: marcomoroni
-linkedin_username: marco-m-082083120
+linkedin_username: m-moroni
 
 # Build settings
 markdown: kramdown

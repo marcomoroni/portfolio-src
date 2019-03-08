@@ -1,12 +1,12 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.2">Jekyll</generator><link href="http://localhost:4000/portfolio/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/portfolio/" rel="alternate" type="text/html" /><updated>2019-03-08T13:20:39+00:00</updated><id>http://localhost:4000/portfolio/</id><title type="html">Marco Moroni</title><subtitle>Ciao, here's my portfolio.</subtitle><entry><title type="html">Idliketogohome</title><link href="http://localhost:4000/portfolio/idliketogohome/" rel="alternate" type="text/html" title="Idliketogohome" /><published>2019-01-27T00:00:00+00:00</published><updated>2019-01-27T00:00:00+00:00</updated><id>http://localhost:4000/portfolio/idliketogohome</id><content type="html" xml:base="http://localhost:4000/portfolio/idliketogohome/">&lt;p&gt;&lt;img src=&quot;/portfolio/assets/idliketogohome/h1.png&quot; alt=&quot;&quot; /&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.2">Jekyll</generator><link href="http://localhost:4000/portfolio/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/portfolio/" rel="alternate" type="text/html" /><updated>2019-03-08T14:02:40+00:00</updated><id>http://localhost:4000/portfolio/</id><title type="html">Marco Moroni</title><subtitle>Ciao, here's my portfolio.</subtitle><entry><title type="html">Idliketogohome</title><link href="http://localhost:4000/portfolio/idliketogohome/" rel="alternate" type="text/html" title="Idliketogohome" /><published>2019-01-27T00:00:00+00:00</published><updated>2019-01-27T00:00:00+00:00</updated><id>http://localhost:4000/portfolio/idliketogohome</id><content type="html" xml:base="http://localhost:4000/portfolio/idliketogohome/">&lt;p&gt;&lt;img src=&quot;/portfolio/assets/idliketogohome/h1.png&quot; alt=&quot;&quot; /&gt;
 &lt;img src=&quot;/portfolio/assets/idliketogohome/h2.png&quot; alt=&quot;&quot; /&gt;
 &lt;img src=&quot;/portfolio/assets/idliketogohome/h3.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;I made &lt;em&gt;I’d like to go home&lt;/em&gt; during the 48h of the &lt;a href=&quot;https://globalgamejam.org/&quot;&gt;Global Game Jam&lt;/a&gt; 2019. &lt;a href=&quot;https://marcomoroni.itch.io/id-like-to-go-home&quot;&gt;Play it on itch.io!&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;This year I decided to go all solo: I draw the assets and I used &lt;a href=&quot;https://unity3d.com/&quot;&gt;Unity&lt;/a&gt; to build it. It’s made with 2D sprites in a 3D side-scrolling scene.&lt;/p&gt;
+&lt;p&gt;This year I decided to go all solo: I drew the assets and I used &lt;a href=&quot;https://unity3d.com/&quot;&gt;Unity&lt;/a&gt; to build it. It’s made with 2D sprites in a 3D side-scrolling scene.&lt;/p&gt;
 
-&lt;p&gt;It’s a short story about a rabbit that lost his way home. My attention was all on the &lt;em&gt;feelings&lt;/em&gt; and &lt;em&gt;immersion&lt;/em&gt; of the player and the art-style was inspired by &lt;a href=&quot;http://jonklassen.tumblr.com/&quot;&gt;Jon Klassen&lt;/a&gt;—for the characters and the story—and &lt;a href=&quot;https://galshir.com/&quot;&gt;Gal Shir&lt;/a&gt;—for the colours and the vegetation.&lt;/p&gt;
+&lt;p&gt;It’s a short story about a rabbit that lost his way home. My attention was all on the &lt;em&gt;immersion&lt;/em&gt; of the player and the art-style was inspired by &lt;a href=&quot;http://jonklassen.tumblr.com/&quot;&gt;Jon Klassen&lt;/a&gt;—for the characters and the story—and &lt;a href=&quot;https://galshir.com/&quot;&gt;Gal Shir&lt;/a&gt;—for the colours and the vegetation.&lt;/p&gt;
 
 &lt;p&gt;Some technical insights:&lt;/p&gt;
 &lt;ul&gt;
@@ -19,6 +19,8 @@
 &lt;p&gt;All the code is in &lt;a href=&quot;https://github.com/marcomoroni/ggj-2019&quot;&gt;here&lt;/a&gt;, and you can &lt;a href=&quot;https://marcomoroni.itch.io/id-like-to-go-home&quot;&gt;play it online on itch.io&lt;/a&gt;.&lt;/p&gt;</content><author><name></name></author><category term="game jam" /><category term="games dev" /><category term="unity" /><summary type="html"></summary></entry><entry><title type="html">Tabletop</title><link href="http://localhost:4000/portfolio/tabletop/" rel="alternate" type="text/html" title="Tabletop" /><published>2018-12-19T00:00:00+00:00</published><updated>2018-12-19T00:00:00+00:00</updated><id>http://localhost:4000/portfolio/tabletop</id><content type="html" xml:base="http://localhost:4000/portfolio/tabletop/">&lt;p&gt;This is a tabletop engine made with &lt;a href=&quot;https://unity3d.com/&quot;&gt;Unity&lt;/a&gt;: a player can drag-and-drop cards across different &lt;em&gt;decks&lt;/em&gt; (a &lt;em&gt;deck&lt;/em&gt; is considered a collection of cards that can be laid down in different ways). A developer should be able to easily set up a scene for any board game (not &lt;em&gt;any&lt;/em&gt; but you get the point). To help out developers I built some tools to arrange the scene using the powerful feature of the Unity Editor.&lt;/p&gt;
 
 &lt;p&gt;The Unity Package with a short guide is &lt;a href=&quot;https://github.com/marcomoroni/set10110&quot;&gt;on GitHub&lt;/a&gt;. It’s not &lt;em&gt;complete&lt;/em&gt;, but it should work for simple games.&lt;/p&gt;
+
+&lt;p&gt;This project made me realize how much I enjoy tools development and playing around with the Unity editor. Tools are extremely important especially for big games, and with them I can even do some UX design that I like so much!&lt;/p&gt;
 
 &lt;h3 id=&quot;tabletop-engine&quot;&gt;Tabletop engine&lt;/h3&gt;
 
@@ -42,7 +44,9 @@
 
 &lt;p&gt;&lt;img src=&quot;/portfolio/assets/tabletop/inspector.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/portfolio/assets/tabletop/gizmos.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;</content><author><name></name></author><category term="tools dev" /><category term="unity" /><summary type="html">This is a tabletop engine made with Unity: a player can drag-and-drop cards across different decks (a deck is considered a collection of cards that can be laid down in different ways). A developer should be able to easily set up a scene for any board game (not any but you get the point). To help out developers I built some tools to arrange the scene using the powerful feature of the Unity Editor.</summary></entry><entry><title type="html">Ray Tracer</title><link href="http://localhost:4000/portfolio/raytracer/" rel="alternate" type="text/html" title="Ray Tracer" /><published>2018-12-18T00:00:00+00:00</published><updated>2018-12-18T00:00:00+00:00</updated><id>http://localhost:4000/portfolio/ray-tracer</id><content type="html" xml:base="http://localhost:4000/portfolio/raytracer/">&lt;p&gt;&lt;img src=&quot;/portfolio/assets/raytracer/ray02.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/portfolio/assets/tabletop/gizmos.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Note that I’m working on &lt;a href=&quot;https://github.com/marcomoroni/onirim&quot;&gt;a proper board game engine&lt;/a&gt; and I want to implement &lt;a href=&quot;https://boardgamegeek.com/boardgame/156336/onirim-second-edition&quot;&gt;Onirim&lt;/a&gt; soon. Also when I did this project I didn’t know about events and delegates = could have been much better.&lt;/em&gt;&lt;/p&gt;</content><author><name></name></author><category term="tools dev" /><category term="unity" /><summary type="html">This is a tabletop engine made with Unity: a player can drag-and-drop cards across different decks (a deck is considered a collection of cards that can be laid down in different ways). A developer should be able to easily set up a scene for any board game (not any but you get the point). To help out developers I built some tools to arrange the scene using the powerful feature of the Unity Editor.</summary></entry><entry><title type="html">Ray Tracer</title><link href="http://localhost:4000/portfolio/raytracer/" rel="alternate" type="text/html" title="Ray Tracer" /><published>2018-12-18T00:00:00+00:00</published><updated>2018-12-18T00:00:00+00:00</updated><id>http://localhost:4000/portfolio/ray-tracer</id><content type="html" xml:base="http://localhost:4000/portfolio/raytracer/">&lt;p&gt;&lt;img src=&quot;/portfolio/assets/raytracer/ray02.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Future shines bright for ray tracers, and although the theory behind them is fairly simple, they are magnificently &lt;em&gt;slow&lt;/em&gt;.&lt;/p&gt;
 
@@ -85,6 +89,8 @@
 
 &lt;p&gt;It runs on an engine built from scratch in C++, with the help of &lt;a href=&quot;https://www.sfml-dev.org/&quot;&gt;SFML&lt;/a&gt; and &lt;a href=&quot;https://github.com/erincatto/Box2D&quot;&gt;Box2D&lt;/a&gt;. The pieces are the same you would expect to find in any game engine: scenes, entities, components, etc. The game has all the basic technical features necessary to consider a game &lt;em&gt;a game&lt;/em&gt;, for example: a menu, save and load, a tutorial, an ending, sounds and music, support for different screen resolutions, remappable controls and joystick support.&lt;/p&gt;
 
+&lt;p&gt;Before this project, I used to use Unity for very simple tasks, without having a deep understanding of the engine and its potential. After completing the project I saw the light! Game engines now made complete sense: this project was a turning point for me because I created a &lt;em&gt;tiny&lt;/em&gt; engine, very similar to Unity (and others), and it boosted my confidence to the sky.&lt;/p&gt;
+
 &lt;p&gt;The source code is &lt;a href=&quot;https://github.com/marcomoroni/azucena&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;/portfolio/assets/azucena/capture_04.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
@@ -95,9 +101,14 @@
 
 &lt;p&gt;This experimental VR application developed for &lt;a href=&quot;https://www.disneyresearch.com/&quot;&gt;Disney Research&lt;/a&gt; lets you navigate through a dataset. One of the controllers is a lens that distorts what you see and magnifies a certain area.&lt;/p&gt;
 
-&lt;p&gt;I worked in a team of six people, and my task was the importation and visualization of the datasets in the &lt;a href=&quot;https://unity3d.com/&quot;&gt;Unity&lt;/a&gt; engine. For this demonstration we used data representing the revenue of different films. It is possible to read the details of each point in the other controller.&lt;/p&gt;
+&lt;p&gt;I worked in a team of six people, and I was responsible for:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;setting up and supervising version control on GitHub. For this, I also prepared cheat sheets for who was less familiar with Git and GitHub;&lt;/li&gt;
+  &lt;li&gt;the importation and visualization of the datasets in the &lt;a href=&quot;https://unity3d.com/&quot;&gt;Unity&lt;/a&gt; engine;&lt;/li&gt;
+  &lt;li&gt;the user experience, namely the controls and the UI in the controllers: the user points a &lt;em&gt;laser&lt;/em&gt; or use a lens with its right hand, while it can read data details on a surface on its left hand.&lt;/li&gt;
+&lt;/ul&gt;
 
-&lt;p&gt;It was awarded as the second best group project of the year.&lt;/p&gt;
+&lt;p&gt;It was awarded as the second best group project of the year, but this doesn’t mean everything went perfectly. For me, the biggest problem we had during the development was that we were not entirely sure what was the final use of it: I think it’s important for people to be motivated to know were their project will be used and why is it important. In any case, a positive attitude sometimes it’s all that’s needed!&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;/portfolio/assets/lens-vr/capture05.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
@@ -153,7 +164,7 @@
 
 &lt;p&gt;&lt;img src=&quot;/portfolio/assets/pba/domino.gif&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;</content><author><name></name></author><category term="physics" /><summary type="html">This is a set of physics-based animations I made at university using C++. Here’s the code on GitHub.</summary></entry><entry><title type="html">Website</title><link href="http://localhost:4000/portfolio/site/" rel="alternate" type="text/html" title="Website" /><published>2017-05-01T00:00:00+01:00</published><updated>2017-05-01T00:00:00+01:00</updated><id>http://localhost:4000/portfolio/website</id><content type="html" xml:base="http://localhost:4000/portfolio/site/">&lt;p&gt;I hope you’re enjoying this simple website because I took care of every pixel.&lt;/p&gt;
 
-&lt;p&gt;I like minimalism, and you’ve probably noticed. I used warm colours and only one accent colour for interactive elements. There are no shadows and no rounded corners. It was very important for me to have visual consistency and a pleasant experience overall.&lt;/p&gt;
+&lt;p&gt;I like essential design, and you’ve probably noticed. I used warm colours and only one accent colour for interactive elements. There are no shadows and no rounded corners. It was very important for me to have visual consistency and a pleasant experience overall.&lt;/p&gt;
 
 &lt;p&gt;The abstract (or title) of each portfolio entry uses a monospace font: this makes it easier to recognize this element throughout the site and it highlights the fact that this is a portfolio of a developer. They all have tags to easily categorize them.&lt;/p&gt;
 

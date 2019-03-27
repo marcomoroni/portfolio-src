@@ -1,0 +1,268 @@
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Marco Moroni</title>
+  <meta name="description" content="Ciao, here's my portfolio.">
+  <meta name="viewport" content="width=device-width, maximum-scale=1, minimum-scale=1" />
+  <link rel="stylesheet" href="/portfolio/styles/default.css">
+  <link rel="stylesheet" href="/portfolio/styles/home.css">
+  <link rel="stylesheet" href="/portfolio/styles/screen_size.css">
+  <link rel="icon" href="https://github.com/marcomoroni.png?size=16">
+  <link href="https://fonts.googleapis.com/css?family=Muli:300,300i,400,900,900i" rel="stylesheet">
+  <!-- <link href="https://fonts.googleapis.com/css?family=Cutive+Mono" rel="stylesheet"> -->
+  <link href="https://fonts.googleapis.com/css?family=Overpass+Mono" rel="stylesheet">
+  <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> -->
+</head>
+
+<body>
+  <a class="top_home_button" href="/portfolio/" title="Home"></a>
+  <div class="nav_dots">
+  
+    
+    <div class="current"></div>
+    
+  
+    
+    <div></div>
+    
+  
+    
+    <div></div>
+    
+  
+    
+    <div></div>
+    
+  
+    
+    <div></div>
+    
+  
+    
+    <div></div>
+    
+  
+    
+    <div></div>
+    
+  
+    
+    <div></div>
+    
+  
+    
+    <div></div>
+    
+  
+    
+    <div></div>
+    
+  
+    
+    <div></div>
+    
+  
+</div>
+
+
+<div class="spacer_top"></div>
+
+<div class="container">
+
+  <div style="margin: auto; max-width: 380px; margin-bottom: 1em;">
+    <div class="tags_list">
+
+  
+
+    
+      <div class="tag">
+  <p>procedural generation</p>
+</div>
+
+    
+
+  
+
+</div>
+
+  </div>
+  <div class="abstract">
+  
+  <p>Procedurally generated watercolour textures.</p>
+  
+</div>
+
+
+</div>
+
+<div class="space_between_abstract_and_content"></div>
+
+<div class="container post">
+
+  
+
+  <p><img src="/portfolio/assets/watercolour/textures.gif" alt="" /></p>
+
+<p>While working on my Honours Project I discovered the wonders of procedural generation, and now no one can stop me. I though procedural watercolour textures could be a good experiment to attempt and I found a couple of ways to do it. One is from <a href="https://tylerxhobbs.com/essays/2017/a-generative-approach-to-simulating-watercolor-paints">Tyler Hobbs</a>, in which a shape is deformed multiple times, and the other is from <a href="https://www.reddit.com/r/proceduralgeneration/comments/6mta0f/watercolor_simple_noise_algorithm/">this Reddit post</a>, which is the one I tried. The algorithm recursively <em>expands</em> a small image (here 3 × 3 pixels) by adding a new pixel between the existing ones, and their colour is chosen through a linear interpolation between the neighbouring ones.</p>
+
+<p>The code here is simply translated into <a href="https://processing.org/">Processing</a> (Java — ew) from the JavaScript implementation:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>// https://www.reddit.com/r/proceduralgeneration/comments/6mta0f/watercolor_simple_noise_algorithm/
+
+void setup()
+{
+  size(700, 700);
+  background(100);
+  colorMode(RGB, 255, 255, 255, 1);
+
+  // Generate 10 images
+  for (int image = 0; image &lt; 10; image++)
+  {
+    // Seed
+    long seed = System.nanoTime();
+    randomSeed(seed);
+
+    // Staring size
+    int size = 3;
+
+    // The pixels
+    color[][] pxs = new color[size][size];
+
+    // Initialize with random colours
+    for (int x = 0; x &lt; size; x++)
+    {
+      for (int y = 0; y &lt; size; y++)
+      {
+        pxs[x][y] = color(random(255), random(255), random(255));
+      }
+    }
+
+    // Zoom iterations
+    int zoom = 8;
+
+    // Zoom
+    for (int z = 0; z &lt; zoom; z++)
+    {
+      // Expand size
+      size = (size * 2) - 1;
+
+      // Create new array of zoomed pixels
+      color[][] zoomedPxs = new color[size][size];
+
+      // Set colours by 2x2 pixels chunks, with the top left of the original colour
+      for (int x = 0; x &lt; size; x += 2)
+      {
+        for (int y = 0; y &lt; size; y += 2)
+        {
+          // Top left is the original
+          zoomedPxs[x][y] = pxs[x / 2][y / 2];
+
+          // Top right
+          if (x &lt; size - 1)
+          {
+            float r = random(1);
+            zoomedPxs[x + 1][y] = lerpColor(pxs[x / 2][y / 2], pxs[x / 2 + 1][y / 2], r);
+          }
+
+          // Bottom left
+          if (y &lt; size - 1)
+          {
+            float r = random(1);
+            zoomedPxs[x][y + 1] = lerpColor(pxs[x / 2][y / 2], pxs[x / 2][y / 2 + 1], r);
+          }
+
+          // Bottom right
+          if (x &lt; size - 1 &amp;&amp; y &lt; size - 1)
+          {
+            float r1 = random(1);
+            float r2 = random(1);
+            color c1 = lerpColor(pxs[x / 2][y / 2], pxs[x / 2 + 1][y / 2 + 1], r1);
+            color c2 = lerpColor(pxs[x / 2][y / 2 + 1], pxs[x / 2 + 1][y / 2], r2);
+            float r3 = random(1);
+            zoomedPxs[x + 1][y + 1] = lerpColor(c1, c2, r3);
+          }
+        }
+      }
+
+      // Save zoomed pixels
+      pxs = zoomedPxs;
+    }
+
+    print(pxs);
+
+    save("output/watercolor_" + seed + ".tif");
+  }
+}
+
+void print(color[][] pxs)
+{
+  int side = ceil((float)width / pxs.length);
+  noStroke();
+  for (int x = 0; x &lt; pxs.length; x++)
+  {
+    for (int y = 0; y &lt; pxs.length; y++)
+    {
+      for (int sx = 0; sx &lt; side; sx++)
+      {
+        for (int sy = 0; sy &lt; side; sy++)
+        {
+          set(side * x + sx, side * y + sy, pxs[x][y]);
+        }
+      }
+    }
+  }
+}
+</code></pre></div></div>
+
+
+  <div class="bottom_navigation_buttons">
+
+    <!-- Can be with or without accent colour, and when not hover can or cannot have the background.
+normal / nil : accent colour, no background when no hover
+important : accent colour, backround when no hover -->
+
+
+  <a class=button href=/portfolio/>Home</a>
+
+
+
+    
+      <!-- Can be with or without accent colour, and when not hover can or cannot have the background.
+normal / nil : accent colour, no background when no hover
+important : accent colour, backround when no hover -->
+
+
+  <a class=button href=/portfolio/idliketogohome/>Next   &#10230;</a>
+
+
+    
+
+  </div>
+
+</div>
+
+<div class="spacer_bottom"></div>
+
+<<script>
+  // Add the post date to the first paragraph that does not contain an image
+  var container = document.getElementsByClassName("container post")[0];
+  var ps = container.getElementsByTagName("p");
+  for (i = 0; i < ps.length; i++)
+  {
+    if (ps[i].getElementsByTagName("img").length < 1)
+    {
+      var txt = "March 2019"
+      
+      txt += "\xa0\xa0\xa0&#92;&#92;&#92;\xa0\xa0\xa0";
+
+      ps[i].insertAdjacentHTML("afterbegin", txt);
+
+      break;
+    }
+  }
+</script>
+
+  <div class="modal"><img class="modal-content"></div>
+  <script src="/portfolio/assets/scripts/modal.js"></script>
+  <script src="/portfolio/assets/scripts/typewriter.js"></script>
+</body>

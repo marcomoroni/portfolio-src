@@ -1,4 +1,115 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.2">Jekyll</generator><link href="http://localhost:4000/portfolio/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/portfolio/" rel="alternate" type="text/html" /><updated>2019-03-08T14:02:40+00:00</updated><id>http://localhost:4000/portfolio/</id><title type="html">Marco Moroni</title><subtitle>Ciao, here's my portfolio.</subtitle><entry><title type="html">Idliketogohome</title><link href="http://localhost:4000/portfolio/idliketogohome/" rel="alternate" type="text/html" title="Idliketogohome" /><published>2019-01-27T00:00:00+00:00</published><updated>2019-01-27T00:00:00+00:00</updated><id>http://localhost:4000/portfolio/idliketogohome</id><content type="html" xml:base="http://localhost:4000/portfolio/idliketogohome/">&lt;p&gt;&lt;img src=&quot;/portfolio/assets/idliketogohome/h1.png&quot; alt=&quot;&quot; /&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.2">Jekyll</generator><link href="http://localhost:4000/portfolio/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/portfolio/" rel="alternate" type="text/html" /><updated>2019-03-27T14:36:13+00:00</updated><id>http://localhost:4000/portfolio/</id><title type="html">Marco Moroni</title><subtitle>Ciao, here's my portfolio.</subtitle><entry><title type="html">Watercolour</title><link href="http://localhost:4000/portfolio/watercolour/" rel="alternate" type="text/html" title="Watercolour" /><published>2019-03-27T00:00:00+00:00</published><updated>2019-03-27T00:00:00+00:00</updated><id>http://localhost:4000/portfolio/watercolour</id><content type="html" xml:base="http://localhost:4000/portfolio/watercolour/">&lt;p&gt;&lt;img src=&quot;/portfolio/assets/watercolour/textures.gif&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;While working on my Honours Project I discovered the wonders of procedural generation, and now no one can stop me. I though procedural watercolour textures could be a good experiment to attempt and I found a couple of ways to do it. One is from &lt;a href=&quot;https://tylerxhobbs.com/essays/2017/a-generative-approach-to-simulating-watercolor-paints&quot;&gt;Tyler Hobbs&lt;/a&gt;, in which a shape is deformed multiple times, and the other is from &lt;a href=&quot;https://www.reddit.com/r/proceduralgeneration/comments/6mta0f/watercolor_simple_noise_algorithm/&quot;&gt;this Reddit post&lt;/a&gt;, which is the one I tried. The algorithm recursively &lt;em&gt;expands&lt;/em&gt; a small image (here 3 × 3 pixels) by adding a new pixel between the existing ones, and their colour is chosen through a linear interpolation between the neighbouring ones.&lt;/p&gt;
+
+&lt;p&gt;The code here is simply translated into &lt;a href=&quot;https://processing.org/&quot;&gt;Processing&lt;/a&gt; (Java — ew) from the JavaScript implementation:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;// https://www.reddit.com/r/proceduralgeneration/comments/6mta0f/watercolor_simple_noise_algorithm/
+
+void setup()
+{
+  size(700, 700);
+  background(100);
+  colorMode(RGB, 255, 255, 255, 1);
+
+  // Generate 10 images
+  for (int image = 0; image &amp;lt; 10; image++)
+  {
+    // Seed
+    long seed = System.nanoTime();
+    randomSeed(seed);
+
+    // Staring size
+    int size = 3;
+
+    // The pixels
+    color[][] pxs = new color[size][size];
+
+    // Initialize with random colours
+    for (int x = 0; x &amp;lt; size; x++)
+    {
+      for (int y = 0; y &amp;lt; size; y++)
+      {
+        pxs[x][y] = color(random(255), random(255), random(255));
+      }
+    }
+
+    // Zoom iterations
+    int zoom = 8;
+
+    // Zoom
+    for (int z = 0; z &amp;lt; zoom; z++)
+    {
+      // Expand size
+      size = (size * 2) - 1;
+
+      // Create new array of zoomed pixels
+      color[][] zoomedPxs = new color[size][size];
+
+      // Set colours by 2x2 pixels chunks, with the top left of the original colour
+      for (int x = 0; x &amp;lt; size; x += 2)
+      {
+        for (int y = 0; y &amp;lt; size; y += 2)
+        {
+          // Top left is the original
+          zoomedPxs[x][y] = pxs[x / 2][y / 2];
+
+          // Top right
+          if (x &amp;lt; size - 1)
+          {
+            float r = random(1);
+            zoomedPxs[x + 1][y] = lerpColor(pxs[x / 2][y / 2], pxs[x / 2 + 1][y / 2], r);
+          }
+
+          // Bottom left
+          if (y &amp;lt; size - 1)
+          {
+            float r = random(1);
+            zoomedPxs[x][y + 1] = lerpColor(pxs[x / 2][y / 2], pxs[x / 2][y / 2 + 1], r);
+          }
+
+          // Bottom right
+          if (x &amp;lt; size - 1 &amp;amp;&amp;amp; y &amp;lt; size - 1)
+          {
+            float r1 = random(1);
+            float r2 = random(1);
+            color c1 = lerpColor(pxs[x / 2][y / 2], pxs[x / 2 + 1][y / 2 + 1], r1);
+            color c2 = lerpColor(pxs[x / 2][y / 2 + 1], pxs[x / 2 + 1][y / 2], r2);
+            float r3 = random(1);
+            zoomedPxs[x + 1][y + 1] = lerpColor(c1, c2, r3);
+          }
+        }
+      }
+
+      // Save zoomed pixels
+      pxs = zoomedPxs;
+    }
+
+    print(pxs);
+
+    save(&quot;output/watercolor_&quot; + seed + &quot;.tif&quot;);
+  }
+}
+
+void print(color[][] pxs)
+{
+  int side = ceil((float)width / pxs.length);
+  noStroke();
+  for (int x = 0; x &amp;lt; pxs.length; x++)
+  {
+    for (int y = 0; y &amp;lt; pxs.length; y++)
+    {
+      for (int sx = 0; sx &amp;lt; side; sx++)
+      {
+        for (int sy = 0; sy &amp;lt; side; sy++)
+        {
+          set(side * x + sx, side * y + sy, pxs[x][y]);
+        }
+      }
+    }
+  }
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name></name></author><category term="procedural generation" /><summary type="html"></summary></entry><entry><title type="html">Idliketogohome</title><link href="http://localhost:4000/portfolio/idliketogohome/" rel="alternate" type="text/html" title="Idliketogohome" /><published>2019-01-27T00:00:00+00:00</published><updated>2019-01-27T00:00:00+00:00</updated><id>http://localhost:4000/portfolio/idliketogohome</id><content type="html" xml:base="http://localhost:4000/portfolio/idliketogohome/">&lt;p&gt;&lt;img src=&quot;/portfolio/assets/idliketogohome/h1.png&quot; alt=&quot;&quot; /&gt;
 &lt;img src=&quot;/portfolio/assets/idliketogohome/h2.png&quot; alt=&quot;&quot; /&gt;
 &lt;img src=&quot;/portfolio/assets/idliketogohome/h3.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
@@ -200,18 +311,4 @@
 
 &lt;p&gt;&lt;img src=&quot;/portfolio/assets/mv/screen02.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/portfolio/assets/mv/screen07.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;</content><author><name></name></author><category term="graphics" /><summary type="html"></summary></entry><entry><title type="html">Pearl Puzzle</title><link href="http://localhost:4000/portfolio/pearl/" rel="alternate" type="text/html" title="Pearl Puzzle" /><published>2016-01-01T00:00:00+00:00</published><updated>2016-01-01T00:00:00+00:00</updated><id>http://localhost:4000/portfolio/pearl-puzzle</id><content type="html" xml:base="http://localhost:4000/portfolio/pearl/">&lt;p&gt;&lt;img src=&quot;/portfolio/assets/pearl/title01.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;The theme for the &lt;a href=&quot;https://globalgamejam.org/&quot;&gt;Global Game Jam 2017&lt;/a&gt; was &lt;em&gt;waves&lt;/em&gt; and because it was my first Game Jam, I decided to keep it simple. I participated with a friend and we had a lot of fun!&lt;/p&gt;
-
-&lt;p&gt;Our idea was to make a &lt;em&gt;Professor Layton&lt;/em&gt; style puzzle game with a seaside theme and use the movement of waves to solve it. We used &lt;a href=&quot;https://unity3d.com/&quot;&gt;Unity&lt;/a&gt; and I drew the assets in &lt;a href=&quot;http://www.pixelmator.com/&quot;&gt;Pixelmator&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;Here’s how you play it: by pressing the directional arrows you move all the movable pieces on the grid by 1 step in the direction you chose. Your goal is to place all the pearls back to the corresponding shell.&lt;/p&gt;
-
-&lt;p&gt;After the 48 hours we ended up with the two working levels that you can see below.&lt;/p&gt;
-
-&lt;p&gt;You can download this tiny game from my &lt;a href=&quot;https://github.com/MarcoMoroni/ShellPuzzle&quot;&gt;GitHub&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/portfolio/assets/pearl/screen01.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/portfolio/assets/pearl/screen02.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;</content><author><name></name></author><category term="game jam" /><category term="games dev" /><category term="unity" /><summary type="html"></summary></entry></feed>
+&lt;p&gt;&lt;img src=&quot;/portfolio/assets/mv/screen07.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;</content><author><name></name></author><category term="graphics" /><summary type="html"></summary></entry></feed>

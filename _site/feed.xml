@@ -1,4 +1,66 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.2">Jekyll</generator><link href="http://localhost:4000/portfolio/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/portfolio/" rel="alternate" type="text/html" /><updated>2019-03-27T14:36:13+00:00</updated><id>http://localhost:4000/portfolio/</id><title type="html">Marco Moroni</title><subtitle>Ciao, here's my portfolio.</subtitle><entry><title type="html">Watercolour</title><link href="http://localhost:4000/portfolio/watercolour/" rel="alternate" type="text/html" title="Watercolour" /><published>2019-03-27T00:00:00+00:00</published><updated>2019-03-27T00:00:00+00:00</updated><id>http://localhost:4000/portfolio/watercolour</id><content type="html" xml:base="http://localhost:4000/portfolio/watercolour/">&lt;p&gt;&lt;img src=&quot;/portfolio/assets/watercolour/textures.gif&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.2">Jekyll</generator><link href="http://localhost:4000/portfolio/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/portfolio/" rel="alternate" type="text/html" /><updated>2019-04-24T18:08:20+01:00</updated><id>http://localhost:4000/portfolio/</id><title type="html">Marco Moroni</title><subtitle>Ciao, here's my portfolio.</subtitle><entry><title type="html">Cities</title><link href="http://localhost:4000/portfolio/cities/" rel="alternate" type="text/html" title="Cities" /><published>2019-04-01T00:00:00+01:00</published><updated>2019-04-01T00:00:00+01:00</updated><id>http://localhost:4000/portfolio/cities</id><content type="html" xml:base="http://localhost:4000/portfolio/cities/">&lt;p&gt;This was my Honours Project for my degree in Games Development at Edinburgh Napier University. The most interesting part was discovering that procedural art is actually a thing. And it’s addicting.&lt;/p&gt;
+
+&lt;p&gt;The project was divided in two parts. First, I studied and classified the different procedural content generation (PCG) techniques. Then, I picked some of them so to create a generator in Unity that would create cities similar to the ones drawn by &lt;a href=&quot;https://nokkasili.tumblr.com/&quot;&gt;Minna O.&lt;/a&gt;:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/portfolio/assets/cities/minna02.jpg&quot; alt=&quot;&quot; /&gt;
+&lt;img src=&quot;/portfolio/assets/cities/minna03.jpg&quot; alt=&quot;&quot; /&gt;
+&lt;img src=&quot;/portfolio/assets/cities/minna04.jpg&quot; alt=&quot;&quot; /&gt;
+&lt;img src=&quot;/portfolio/assets/cities/minna05.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;These are some screenshots of the generated artefacts, which is in 3D and interactive. The third one has on orthographic projection, which I think looks better when you can only see an image (and not interact with the scene). I was extremely lucky to have the artist helping me  throughout the project: she made the assets used for the final system:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/portfolio/assets/cities/perspective-01.png&quot; alt=&quot;&quot; /&gt;
+&lt;img src=&quot;/portfolio/assets/cities/perspective-03.png&quot; alt=&quot;&quot; /&gt;
+&lt;img src=&quot;/portfolio/assets/cities/ortho-01.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Needless to say, the final result is way more limited than initially imagined, however I’m extremely happy with what I’ve learnt, as this was my first time delving into PCG.&lt;/p&gt;
+
+&lt;p&gt;You can try the generator online &lt;a href=&quot;https://marcomoroni.itch.io/architect&quot;&gt;here&lt;/a&gt;, and if you want to learn more about how I did it, keep reading!&lt;/p&gt;
+
+&lt;h3 id=&quot;classification&quot;&gt;Classification&lt;/h3&gt;
+
+&lt;p&gt;PCG techniques can be divided in two categories:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;additive techniques, where the artefacts are created: goblins and treasures are placed in a map, the loot of a chest is created, etc.;&lt;/li&gt;
+  &lt;li&gt;substractive techniques, where the artefacts are filtered: the generator (or sometimes a human) needs to evaluate what has been produced and pick the correct or best ones.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Here, I covered only additive techniques, and even so, the list of them is far from comprehensive. I described some of the most used algorithms, and I focused on the ones that I actually used. Here’s a short summary of the additive PCG algorithms:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Tiles: As the name suggests, when you have a bunch of equally sized tiles you can place them around following certain rules.&lt;/li&gt;
+  &lt;li&gt;Grammars: These techniques usually consist on a set of rewriting rules, for example, if I have a rule such as &lt;em&gt;A → AB&lt;/em&gt;, I can iteratively expand a string &lt;em&gt;A&lt;/em&gt; in &lt;em&gt;AAB&lt;/em&gt;, &lt;em&gt;ABABB&lt;/em&gt; &lt;em&gt;ABBABBB&lt;/em&gt;, etc. This is called an L-system, and it was initially developed to describe how plants look. Fractal are also a type of grammar.&lt;/li&gt;
+  &lt;li&gt;Distribution: Let’s say you need to populate a map with trees, you may want them to be at a certain distance from each other, or you may to have more of them in certain areas. You can use distribution techniques, which give you more control over randomness.&lt;/li&gt;
+  &lt;li&gt;Parametric: Not really algorithm by itself, it usually refers to generators that can be controlled though parameters.&lt;/li&gt;
+  &lt;li&gt;Interpretative: 2D Perlin noise can be interpreted as a black and white texture, which can then be used to create a terrain mesh.&lt;/li&gt;
+  &lt;li&gt;Simulations: Yeah no, that involves things like neural networks and evolutionary algorithms, which are way out of the scope of this project.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;techniques-used&quot;&gt;Techniques used&lt;/h3&gt;
+
+&lt;p&gt;For every category I identified their strengths and weaknesses, and then I picked the ones that better suited what I wanted to achieve.&lt;/p&gt;
+
+&lt;p&gt;A city is made of multiple 2D layers in the &lt;em&gt;z&lt;/em&gt;-axis. Each layer is essentially a list of &lt;code class=&quot;highlighter-rouge&quot;&gt;BUILDING&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;TREE&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;BRIDGE&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;EMPTY_SPACE&lt;/code&gt;, etc., and this list is populated using a Markov chain, which is a distribution technique. The idea of a Markov chain is simple: the probability to pick a certain item depends on the preceding item, and these probabilities are represented with a &lt;em&gt;transition matrix&lt;/em&gt;, in which each cell contain the probability to have a item in a column after an item in a row. Using this method is possible to code rules such as “a bridge must be between two buildings” by (1) having the probability to pick a bridge &amp;gt; 0 only after a building and (2) having a probability of 100% to pick a building after a bridge.&lt;/p&gt;
+
+&lt;p&gt;Next, I used L-systems to compose the buildings as a stack of blocks (like a LEGO construction). Similarly to Markov chains, L-systems are a list of items, but in this case the list gets expanded through following a set of &lt;em&gt;production rules&lt;/em&gt;. Unfortunately, I only used this algorithm in its simplest form to expand a building until it reached a certain height (the list would be something like &lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;lt;block&amp;gt;&amp;lt;block&amp;gt;&amp;lt;block&amp;gt;&amp;lt;block&amp;gt;&amp;lt;roof&amp;gt;&lt;/code&gt;), but I discovered how powerful they could be, in particular, as I wrote earlier, imagine what if in a rule such as &lt;em&gt;A → AB&lt;/em&gt;, &lt;em&gt;A&lt;/em&gt; and &lt;em&gt;B&lt;/em&gt; were shapes—the buildings could have much more complex shapes, &lt;a href=&quot;/portfolio/watercolour&quot;&gt;I would only need a procedural texture to fill it with&lt;/a&gt;!&lt;/p&gt;
+
+&lt;p&gt;Finally, the system is ultimately parametric, and the parameters change either the transition matrix of the Markov chain or the production rules of the L-system.&lt;/p&gt;
+
+&lt;h3 id=&quot;other-things-ive-learnt-but-i-didnt-use&quot;&gt;Other things I’ve learnt but I didn’t use&lt;/h3&gt;
+
+&lt;p&gt;Where to even start?&lt;/p&gt;
+
+&lt;p&gt;Definitely the biggest thing that I didn’t manage to implement were procedurally generated textures. Those would have allowed so much more diversity: the could fill any shape and have use many colour combinations. Being now a Google Search sensei I discovered what most procedural artist have in their toolbox: &lt;a href=&quot;https://processing.org/&quot;&gt;Processing&lt;/a&gt;, noise, noise with one more dimension so to have looping noise, normal distribution, just to name a few.&lt;/p&gt;
+
+&lt;p&gt;Shape grammars. Yeah, I would start from scratch with that.&lt;/p&gt;
+
+&lt;p&gt;Honestly, if you’ve never done it, just search for “procedural art”, finding new algorithms is like opening Christmas presents.&lt;/p&gt;
+
+&lt;h3 id=&quot;academic-poster&quot;&gt;Academic poster&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;/portfolio/assets/cities/poster_front.png&quot; alt=&quot;&quot; /&gt;
+&lt;img src=&quot;/portfolio/assets/cities/poster_back.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;</content><author><name></name></author><category term="procedural generation" /><category term="unity" /><summary type="html">This was my Honours Project for my degree in Games Development at Edinburgh Napier University. The most interesting part was discovering that procedural art is actually a thing. And it’s addicting.</summary></entry><entry><title type="html">Watercolour</title><link href="http://localhost:4000/portfolio/watercolour/" rel="alternate" type="text/html" title="Watercolour" /><published>2019-03-27T00:00:00+00:00</published><updated>2019-03-27T00:00:00+00:00</updated><id>http://localhost:4000/portfolio/watercolour</id><content type="html" xml:base="http://localhost:4000/portfolio/watercolour/">&lt;p&gt;&lt;img src=&quot;/portfolio/assets/watercolour/textures.gif&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;While working on my Honours Project I discovered the wonders of procedural generation, and now no one can stop me. I though procedural watercolour textures could be a good experiment to attempt and I found a couple of ways to do it. One is from &lt;a href=&quot;https://tylerxhobbs.com/essays/2017/a-generative-approach-to-simulating-watercolor-paints&quot;&gt;Tyler Hobbs&lt;/a&gt;, in which a shape is deformed multiple times, and the other is from &lt;a href=&quot;https://www.reddit.com/r/proceduralgeneration/comments/6mta0f/watercolor_simple_noise_algorithm/&quot;&gt;this Reddit post&lt;/a&gt;, which is the one I tried. The algorithm recursively &lt;em&gt;expands&lt;/em&gt; a small image (here 3 × 3 pixels) by adding a new pixel between the existing ones, and their colour is chosen through a linear interpolation between the neighbouring ones.&lt;/p&gt;
 
@@ -283,32 +345,4 @@ void print(color[][] pxs)
 
 &lt;p&gt;On the top left corner there’s an additional &lt;em&gt;Home&lt;/em&gt; button. I would have preferred not to have it, but usability is important.&lt;/p&gt;
 
-&lt;p&gt;I used &lt;a href=&quot;https://jekyllrb.com/&quot;&gt;Jekyll&lt;/a&gt; to build it from the ground up. I’m not a web developer but hey, it came out pretty good!&lt;/p&gt;</content><author><name></name></author><category term="web" /><category term="ui / ux" /><summary type="html">I hope you’re enjoying this simple website because I took care of every pixel.</summary></entry><entry><title type="html">Monument Valley Opengl</title><link href="http://localhost:4000/portfolio/mv/" rel="alternate" type="text/html" title="Monument Valley Opengl" /><published>2017-04-01T00:00:00+01:00</published><updated>2017-04-01T00:00:00+01:00</updated><id>http://localhost:4000/portfolio/monument-valley-opengl</id><content type="html" xml:base="http://localhost:4000/portfolio/mv/">&lt;p&gt;&lt;img src=&quot;/portfolio/assets/mv/animated.gif&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;This is a coursework I’ve made for a Computer Graphics module. I used &lt;a href=&quot;https://www.opengl.org/&quot;&gt;OpenGL&lt;/a&gt; to recreate a scene that looked like a level from the game &lt;em&gt;&lt;a href=&quot;https://www.monumentvalleygame.com/&quot;&gt;Monument Valley&lt;/a&gt;&lt;/em&gt;:&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/portfolio/assets/mv/mv_screen.jpg&quot; alt=&quot;A level from the game&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;You’ve probably noticed the impossible geometries: I made them by using a camera with an orthographical projection, therefore you can’t perceive depth.&lt;/p&gt;
-
-&lt;p&gt;I used three directional lights facing the three visible surfaces. In this way I have a higher control of the colours I want my scene to have.&lt;/p&gt;
-
-&lt;p&gt;The Phong shader had to be used without the reflection component because reflection is affected by the distance from the camera. Using it would break the illusion of impossible geometries.&lt;/p&gt;
-
-&lt;p&gt;To create the water waves that you can see on the left cube I multiplied two identical normal maps moving in different directions.&lt;/p&gt;
-
-&lt;p&gt;Finally, I worked with frames to allow multiple ones to work at the same time: I can have multiple post-processing effects, such as vignette and inverse colours.&lt;/p&gt;
-
-&lt;p&gt;You can take a look at it on my &lt;a href=&quot;https://github.com/MarcoMoroni/CG_cw2&quot;&gt;GitHub&lt;/a&gt; and you can also read the &lt;a href=&quot;href=&amp;quot;https://github.com/MarcoMoroni/CG_cw2/blob/master/Report/report.pdf&quot;&gt;report&lt;/a&gt; I wrote.&lt;/p&gt;
-
-&lt;p&gt;You should play that game btw, it’s gorgeous.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/portfolio/assets/mv/screen04.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/portfolio/assets/mv/screen06.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/portfolio/assets/mv/screen05.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/portfolio/assets/mv/screen02.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/portfolio/assets/mv/screen07.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;</content><author><name></name></author><category term="graphics" /><summary type="html"></summary></entry></feed>
+&lt;p&gt;I used &lt;a href=&quot;https://jekyllrb.com/&quot;&gt;Jekyll&lt;/a&gt; to build it from the ground up. I’m not a web developer but hey, it came out pretty good!&lt;/p&gt;</content><author><name></name></author><category term="web" /><category term="ui / ux" /><summary type="html">I hope you’re enjoying this simple website because I took care of every pixel.</summary></entry></feed>

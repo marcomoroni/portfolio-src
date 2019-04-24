@@ -1,0 +1,228 @@
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Marco Moroni</title>
+  <meta name="description" content="Ciao, here's my portfolio.">
+  <meta name="viewport" content="width=device-width, maximum-scale=1, minimum-scale=1" />
+  <link rel="stylesheet" href="/portfolio/styles/default.css">
+  <link rel="stylesheet" href="/portfolio/styles/home.css">
+  <link rel="stylesheet" href="/portfolio/styles/screen_size.css">
+  <link rel="icon" href="https://github.com/marcomoroni.png?size=16">
+  <link href="https://fonts.googleapis.com/css?family=Muli:300,300i,400,900,900i" rel="stylesheet">
+  <!-- <link href="https://fonts.googleapis.com/css?family=Cutive+Mono" rel="stylesheet"> -->
+  <link href="https://fonts.googleapis.com/css?family=Overpass+Mono" rel="stylesheet">
+  <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> -->
+</head>
+
+<body>
+  <a class="top_home_button" href="/portfolio/" title="Home"></a>
+  <div class="nav_dots">
+  
+    
+    <div class="current"></div>
+    
+  
+    
+    <div></div>
+    
+  
+    
+    <div></div>
+    
+  
+    
+    <div></div>
+    
+  
+    
+    <div></div>
+    
+  
+    
+    <div></div>
+    
+  
+    
+    <div></div>
+    
+  
+    
+    <div></div>
+    
+  
+    
+    <div></div>
+    
+  
+    
+    <div></div>
+    
+  
+    
+    <div></div>
+    
+  
+    
+    <div></div>
+    
+  
+</div>
+
+
+<div class="spacer_top"></div>
+
+<div class="container">
+
+  <div style="margin: auto; max-width: 380px; margin-bottom: 1em;">
+    <div class="tags_list">
+
+  
+
+    
+      <div class="tag">
+  <p>procedural generation</p>
+</div>
+
+    
+      <div class="tag">
+  <p>unity</p>
+</div>
+
+    
+
+  
+
+</div>
+
+  </div>
+  <div class="abstract">
+  
+  <p>A generator of cities following the style of Minna O.</p>
+  
+</div>
+
+
+</div>
+
+<div class="space_between_abstract_and_content"></div>
+
+<div class="container post">
+
+  
+
+  <p>This was my Honours Project for my degree in Games Development at Edinburgh Napier University. The most interesting part was discovering that procedural art is actually a thing. And it’s addicting.</p>
+
+<p>The project was divided in two parts. First, I studied and classified the different procedural content generation (PCG) techniques. Then, I picked some of them so to create a generator in Unity that would create cities similar to the ones drawn by <a href="https://nokkasili.tumblr.com/">Minna O.</a>:</p>
+
+<p><img src="/portfolio/assets/cities/minna02.jpg" alt="" />
+<img src="/portfolio/assets/cities/minna03.jpg" alt="" />
+<img src="/portfolio/assets/cities/minna04.jpg" alt="" />
+<img src="/portfolio/assets/cities/minna05.jpg" alt="" /></p>
+
+<p>These are some screenshots of the generated artefacts, which is in 3D and interactive. The third one has on orthographic projection, which I think looks better when you can only see an image (and not interact with the scene). I was extremely lucky to have the artist helping me  throughout the project: she made the assets used for the final system:</p>
+
+<p><img src="/portfolio/assets/cities/perspective-01.png" alt="" />
+<img src="/portfolio/assets/cities/perspective-03.png" alt="" />
+<img src="/portfolio/assets/cities/ortho-01.png" alt="" /></p>
+
+<p>Needless to say, the final result is way more limited than initially imagined, however I’m extremely happy with what I’ve learnt, as this was my first time delving into PCG.</p>
+
+<p>You can try the generator online <a href="https://marcomoroni.itch.io/architect">here</a>, and if you want to learn more about how I did it, keep reading!</p>
+
+<h3 id="classification">Classification</h3>
+
+<p>PCG techniques can be divided in two categories:</p>
+
+<ul>
+  <li>additive techniques, where the artefacts are created: goblins and treasures are placed in a map, the loot of a chest is created, etc.;</li>
+  <li>substractive techniques, where the artefacts are filtered: the generator (or sometimes a human) needs to evaluate what has been produced and pick the correct or best ones.</li>
+</ul>
+
+<p>Here, I covered only additive techniques, and even so, the list of them is far from comprehensive. I described some of the most used algorithms, and I focused on the ones that I actually used. Here’s a short summary of the additive PCG algorithms:</p>
+
+<ul>
+  <li>Tiles: As the name suggests, when you have a bunch of equally sized tiles you can place them around following certain rules.</li>
+  <li>Grammars: These techniques usually consist on a set of rewriting rules, for example, if I have a rule such as <em>A → AB</em>, I can iteratively expand a string <em>A</em> in <em>AAB</em>, <em>ABABB</em> <em>ABBABBB</em>, etc. This is called an L-system, and it was initially developed to describe how plants look. Fractal are also a type of grammar.</li>
+  <li>Distribution: Let’s say you need to populate a map with trees, you may want them to be at a certain distance from each other, or you may to have more of them in certain areas. You can use distribution techniques, which give you more control over randomness.</li>
+  <li>Parametric: Not really algorithm by itself, it usually refers to generators that can be controlled though parameters.</li>
+  <li>Interpretative: 2D Perlin noise can be interpreted as a black and white texture, which can then be used to create a terrain mesh.</li>
+  <li>Simulations: Yeah no, that involves things like neural networks and evolutionary algorithms, which are way out of the scope of this project.</li>
+</ul>
+
+<h3 id="techniques-used">Techniques used</h3>
+
+<p>For every category I identified their strengths and weaknesses, and then I picked the ones that better suited what I wanted to achieve.</p>
+
+<p>A city is made of multiple 2D layers in the <em>z</em>-axis. Each layer is essentially a list of <code class="highlighter-rouge">BUILDING</code>, <code class="highlighter-rouge">TREE</code>, <code class="highlighter-rouge">BRIDGE</code>, <code class="highlighter-rouge">EMPTY_SPACE</code>, etc., and this list is populated using a Markov chain, which is a distribution technique. The idea of a Markov chain is simple: the probability to pick a certain item depends on the preceding item, and these probabilities are represented with a <em>transition matrix</em>, in which each cell contain the probability to have a item in a column after an item in a row. Using this method is possible to code rules such as “a bridge must be between two buildings” by (1) having the probability to pick a bridge &gt; 0 only after a building and (2) having a probability of 100% to pick a building after a bridge.</p>
+
+<p>Next, I used L-systems to compose the buildings as a stack of blocks (like a LEGO construction). Similarly to Markov chains, L-systems are a list of items, but in this case the list gets expanded through following a set of <em>production rules</em>. Unfortunately, I only used this algorithm in its simplest form to expand a building until it reached a certain height (the list would be something like <code class="highlighter-rouge">&lt;block&gt;&lt;block&gt;&lt;block&gt;&lt;block&gt;&lt;roof&gt;</code>), but I discovered how powerful they could be, in particular, as I wrote earlier, imagine what if in a rule such as <em>A → AB</em>, <em>A</em> and <em>B</em> were shapes—the buildings could have much more complex shapes, <a href="/portfolio/watercolour">I would only need a procedural texture to fill it with</a>!</p>
+
+<p>Finally, the system is ultimately parametric, and the parameters change either the transition matrix of the Markov chain or the production rules of the L-system.</p>
+
+<h3 id="other-things-ive-learnt-but-i-didnt-use">Other things I’ve learnt but I didn’t use</h3>
+
+<p>Where to even start?</p>
+
+<p>Definitely the biggest thing that I didn’t manage to implement were procedurally generated textures. Those would have allowed so much more diversity: the could fill any shape and have use many colour combinations. Being now a Google Search sensei I discovered what most procedural artist have in their toolbox: <a href="https://processing.org/">Processing</a>, noise, noise with one more dimension so to have looping noise, normal distribution, just to name a few.</p>
+
+<p>Shape grammars. Yeah, I would start from scratch with that.</p>
+
+<p>Honestly, if you’ve never done it, just search for “procedural art”, finding new algorithms is like opening Christmas presents.</p>
+
+<h3 id="academic-poster">Academic poster</h3>
+
+<p><img src="/portfolio/assets/cities/poster_front.png" alt="" />
+<img src="/portfolio/assets/cities/poster_back.png" alt="" /></p>
+
+
+  <div class="bottom_navigation_buttons">
+
+    <!-- Can be with or without accent colour, and when not hover can or cannot have the background.
+normal / nil : accent colour, no background when no hover
+important : accent colour, backround when no hover -->
+
+
+  <a class=button href=/portfolio/>Home</a>
+
+
+
+    
+      <!-- Can be with or without accent colour, and when not hover can or cannot have the background.
+normal / nil : accent colour, no background when no hover
+important : accent colour, backround when no hover -->
+
+
+  <a class=button href=/portfolio/watercolour/>Next   &#10230;</a>
+
+
+    
+
+  </div>
+
+</div>
+
+<div class="spacer_bottom"></div>
+
+<<script>
+  // Add the post date to the first paragraph that does not contain an image
+  var container = document.getElementsByClassName("container post")[0];
+  var ps = container.getElementsByTagName("p");
+  for (i = 0; i < ps.length; i++)
+  {
+    if (ps[i].getElementsByTagName("img").length < 1)
+    {
+      var txt = "April 2019"
+      
+      txt += "\xa0\xa0\xa0&#92;&#92;&#92;\xa0\xa0\xa0";
+
+      ps[i].insertAdjacentHTML("afterbegin", txt);
+
+      break;
+    }
+  }
+</script>
+
+  <div class="modal"><img class="modal-content"></div>
+  <script src="/portfolio/assets/scripts/modal.js"></script>
+  <script src="/portfolio/assets/scripts/typewriter.js"></script>
+</body>

@@ -2,7 +2,7 @@
 abstract: "An investigation on parallelization of a ray tracer."
 abstract: "A parallel ray tracer."
 permalink: /raytracer/
-tags: [graphics, "parallel programming"]
+tags: [graphics, "parallel programming", C++]
 assets_folder: "/assets/raytracer"
 preview_img: "/assets/raytracer/ray01.jpg"
 ---

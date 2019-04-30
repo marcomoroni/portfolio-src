@@ -1,7 +1,7 @@
 ---
 abstract: "A scene with impossible geometries made using OpenGL that replicates the art style of the game Monument Valley."
 permalink: /mv/
-tags: ["graphics"]
+tags: ["graphics", C++]
 assets_folder: "/assets/mv"
 preview_img: "/assets/mv/animated.gif"
 favourite: true

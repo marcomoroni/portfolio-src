@@ -1,7 +1,7 @@
 ---
 abstract: "Some physics-based animations with particles and rigid bodies."
 permalink: /pba/
-tags: [physics]
+tags: [physics, C++]
 assets_folder: "/assets/pba"
 preview_img: "/assets/pba/point.gif"
 favourite: true

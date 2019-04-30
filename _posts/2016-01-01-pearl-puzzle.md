@@ -1,7 +1,7 @@
 ---
 abstract: "A tiny puzzle game for the Global Game Jam 2017."
 permalink: /pearl/
-tags: ["game jam", "games dev", unity]
+tags: ["game jam", "games dev", unity, c#]
 assets_folder: "/assets/pearl"
 preview_img: "/assets/pearl/screen02.png"
 ---

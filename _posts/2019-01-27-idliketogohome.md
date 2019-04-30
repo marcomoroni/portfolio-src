@@ -1,7 +1,7 @@
 ---
 abstract: "I'd like to go home."
 permalink: /idliketogohome/
-tags: ["game jam", "games dev", unity]
+tags: ["game jam", "games dev", unity, C#]
 assets_folder: "/assets/idliketogohome"
 preview_img: "/assets/idliketogohome/h1.png"
 ---

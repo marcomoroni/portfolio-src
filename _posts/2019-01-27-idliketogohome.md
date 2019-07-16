@@ -10,7 +10,11 @@ preview_img: "/assets/idliketogohome/h1.png"
 ![]({{ site.baseurl }}{{ page.assets_folder }}/h2.png)
 ![]({{ site.baseurl }}{{ page.assets_folder }}/h3.png)
 
-I made *I'd like to go home* during the 48h of the [Global Game Jam](https://globalgamejam.org/) 2019. [Play it on itch.io!](https://marcomoroni.itch.io/id-like-to-go-home)
+I made *I'd like to go home* during the 48h of the [Global Game Jam](https://globalgamejam.org/) 2019.
+
+{:.buttons_in_blog_text}
+[Play it on itch.io!](https://marcomoroni.itch.io/id-like-to-go-home)
+[Source code](https://github.com/marcomoroni/ggj-2019)
 
 This year I decided to go all solo: I drew the assets and I used [Unity](https://unity3d.com/) to build it. It's made with 2D sprites in a 3D side-scrolling scene.
 
@@ -21,5 +25,3 @@ Some technical insights:
 * The camera is controlled by Unity's Cinemachine and it has a noise and vignette post-processing effect.
 * The sprites are generally made in two steps: first, draw the basic shape with a solid colour; second, use a sand/spray brush to add a secondary colour.
 * There is what seems to be a 3D model of a home: at the time of writing I don't know how to 3D model, so I simply assembled it with some sprites (*hehe*).
-
-All the code is in [here](https://github.com/marcomoroni/ggj-2019), and you can [play it online on itch.io](https://marcomoroni.itch.io/id-like-to-go-home).

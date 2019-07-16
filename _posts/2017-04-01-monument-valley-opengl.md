@@ -23,7 +23,10 @@ To create the water waves that you can see on the left cube I multiplied two ide
 
 Finally, I worked with frames to allow multiple ones to work at the same time: I can have multiple post-processing effects, such as vignette and inverse colours.
 
-You can take a look at it on my [GitHub](https://github.com/MarcoMoroni/CG_cw2) and you can also read the [report](href="https://github.com/MarcoMoroni/CG_cw2/blob/master/Report/report.pdf) I wrote.
+You can take a look at it on my GitHub and you can also read the [report](href="https://github.com/MarcoMoroni/CG_cw2/blob/master/Report/report.pdf) I wrote.
+
+{:.buttons_in_blog_text}
+[Source code](https://github.com/MarcoMoroni/CG_cw2)
 
 You should play that game btw, it's gorgeous.
 

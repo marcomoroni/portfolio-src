@@ -26,4 +26,7 @@ By the end, an image with a resolution of 1024 &#215; 768 pixels with 100 sample
 * 15 seconds with OpenMP
 * 2 seconds with CUDA
 
-The repo is [here](https://github.com/marcomoroni/set10108) and it also contains a detailed report of the work.
+The repo is below and it also contains a detailed report of the work:
+
+{:.buttons_in_blog_text}
+[Source code](https://github.com/marcomoroni/set10108)

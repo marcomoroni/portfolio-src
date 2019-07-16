@@ -7,7 +7,10 @@ preview_img: "/assets/pba/point.gif"
 favourite: true
 ---
 
-This is a set of physics-based animations I made at university using C++. [Here's the code on GitHub](https://github.com/marcomoroni/set09119).
+This is a set of physics-based animations I made at university using C++.
+
+{:.buttons_in_blog_text}
+[Source code](https://github.com/marcomoroni/set09119)
 
 ### Flag
 

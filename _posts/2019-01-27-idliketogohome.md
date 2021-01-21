@@ -1,5 +1,5 @@
 ---
-abstract: "I'd like to go home."
+abstract: "'I'd like to go home'."
 permalink: /idliketogohome/
 tags: ["game jam", "games dev", unity, C#]
 assets_folder: "/assets/idliketogohome"

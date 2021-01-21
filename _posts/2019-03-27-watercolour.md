@@ -1,7 +1,7 @@
 ---
 abstract: "Procedurally generated watercolour textures."
 permalink: /watercolour/
-tags: ["procedural generation", Java]
+tags: ["procedural generation", Processing]
 assets_folder: "/assets/watercolour"
 preview_img: "/assets/watercolour/textures.gif"
 ---

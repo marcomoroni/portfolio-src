@@ -19,47 +19,47 @@
   <div class="nav_dots">
   
     
-    <div></div>
-    
-  
-    
-    <div></div>
-    
-  
-    
-    <div></div>
-    
-  
-    
-    <div></div>
-    
-  
-    
-    <div></div>
-    
-  
-    
-    <div></div>
-    
-  
-    
-    <div></div>
-    
-  
-    
-    <div></div>
-    
-  
-    
-    <div></div>
-    
-  
-    
-    <div></div>
-    
-  
-    
     <div class="current"></div>
+    
+  
+    
+    <div></div>
+    
+  
+    
+    <div></div>
+    
+  
+    
+    <div></div>
+    
+  
+    
+    <div></div>
+    
+  
+    
+    <div></div>
+    
+  
+    
+    <div></div>
+    
+  
+    
+    <div></div>
+    
+  
+    
+    <div></div>
+    
+  
+    
+    <div></div>
+    
+  
+    
+    <div></div>
     
   
     
@@ -84,7 +84,22 @@
 
     
       <div class="tag">
-  <p>web</p>
+  <p>Published</p>
+</div>
+
+    
+      <div class="tag">
+  <p>unity</p>
+</div>
+
+    
+      <div class="tag">
+  <p>C#</p>
+</div>
+
+    
+      <div class="tag">
+  <p>VR</p>
 </div>
 
     
@@ -101,7 +116,7 @@
   </div>
   <div class="abstract">
   
-  <p>This website.<!-- <span class="favourite_gliph">&#x2606;</span>--></p>
+  <p>'Jurassic World Aftermath'.</p>
   
 </div>
 
@@ -114,17 +129,19 @@
 
   
 
-  <p>I hope you’re enjoying this simple website because I took care of every pixel.</p>
+  <p class="no-modal"><img src="/portfolio/assets/jw/jw.jpg" alt="" /></p>
 
-<p>I like essential design, and you’ve probably noticed. I used warm colours and only one accent colour for interactive elements. There are no shadows and no rounded corners. It was very important for me to have visual consistency and a pleasant experience overall.</p>
+<p>My first commercial project I did while working at Coatsink.</p>
 
-<p>The abstract (or title) of each portfolio entry uses a monospace font: this makes it easier to recognize this element throughout the site and it highlights the fact that this is a portfolio of a developer. They all have tags to easily categorize them.</p>
+<p>‘<a href="https://www.oculus.com/jurassic-world-aftermath/">Jurassic World Aftermath</a>’ is a VR game built in Unity. I worked in many areas, such as the progression system, the minigames scattered around the world, the tool on the player’s hand that lets him point at distant objects and interact with them and UI to name a few.</p>
 
-<p>The navigation buttons are at the bottom of each page, beginning from the home. By following it, the user can have a look at all my works in one go. The content of every page is simple and concise with big pictures whenever possible. This is so because the user is most likely an employer, and they have a bunch of other portfolios waiting after mine. <em>Isn’t that right, mr. employer?</em></p>
+<p>The project bravely tried to use Unity’s experimental Data Oriented Technology Stack (DOTS), which introduced me for the first time to data-oriented programming. Not very related, but by extension this led me to discover Rust, the best programming language I’ve come across so far, and later to <a href="https://github.com/bevyengine/bevy">Bevy</a>, which I hope to use soon.</p>
 
-<p>On the top left corner there’s an additional <em>Home</em> button. I would have preferred not to have it, but usability is important.</p>
+<p>DOTS takes C# and attempts to mold it into a data-oriented, garbage-collector-free sub-language, which ideally allows for more performant games. Authoring and runtime would now be split in two different parts, and runtime code would now be mostly built using an entity-component-system architecture instead of <code class="highlighter-rouge">GameObject</code>s. Wether this eventually works well for Unity or not I can’t say for sure, but I’ve surely learned a lot about memory management and the impact of good (or bad) APIs, including comments and documentation.</p>
 
-<p>I used <a href="https://jekyllrb.com/">Jekyll</a> to build it from the ground up. I’m not a web developer but hey, it came out pretty good!</p>
+<p>Working for the first time in such a big team made me change some bad habits I realised I had before, here’s some wisdom from a junior programmer: don’t commit code thinking you’ll have time to go back to it later—make it good the first time; always keep in mind your code is going to be read by someone else—don’t wait to add comments; designers (or clients) don’t always know what thry want—poke them until all is clear. As obvious as they may seem, they’re kinda of a big deal.</p>
+
+<p>I was very lucky to work on this as my fisrt <em>important</em> project, and maybe even more to have such nice co-workers &lt;3.</p>
 
 
   <div class="bottom_navigation_buttons">
@@ -144,7 +161,7 @@ normal / nil : accent colour, no background when no hover
 important : accent colour, backround when no hover -->
 
 
-  <a class=button href=/portfolio/mv/>Next   &#10230;</a>
+  <a class=button href=/portfolio/cities/>Next   &#10230;</a>
 
 
     
@@ -163,9 +180,7 @@ important : accent colour, backround when no hover -->
   {
     if (ps[i].getElementsByTagName("img").length < 1)
     {
-      var txt = "May 2017"
-      
-        txt += ", updated August 2018"
+      var txt = "December 2020"
       
       txt += "\xa0\xa0\xa0&#92;&#92;&#92;\xa0\xa0\xa0";
 

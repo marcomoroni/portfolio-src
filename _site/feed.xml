@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.2">Jekyll</generator><link href="http://localhost:4000/portfolio/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/portfolio/" rel="alternate" type="text/html" /><updated>2021-01-21T18:05:10+00:00</updated><id>http://localhost:4000/portfolio/</id><title type="html">Marco Moroni</title><subtitle>Ciao, here's my portfolio.</subtitle><entry><title type="html">Jw</title><link href="http://localhost:4000/portfolio/jw/" rel="alternate" type="text/html" title="Jw" /><published>2020-12-31T00:00:00+00:00</published><updated>2020-12-31T00:00:00+00:00</updated><id>http://localhost:4000/portfolio/jw</id><content type="html" xml:base="http://localhost:4000/portfolio/jw/">&lt;p class=&quot;no-modal&quot;&gt;&lt;img src=&quot;/portfolio/assets/jw/jw.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.2">Jekyll</generator><link href="http://localhost:4000/portfolio/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/portfolio/" rel="alternate" type="text/html" /><updated>2021-01-21T19:14:54+00:00</updated><id>http://localhost:4000/portfolio/</id><title type="html">Marco Moroni</title><subtitle>Ciao, here's my portfolio.</subtitle><entry><title type="html">Jw</title><link href="http://localhost:4000/portfolio/jw/" rel="alternate" type="text/html" title="Jw" /><published>2020-12-31T00:00:00+00:00</published><updated>2020-12-31T00:00:00+00:00</updated><id>http://localhost:4000/portfolio/jw</id><content type="html" xml:base="http://localhost:4000/portfolio/jw/">&lt;p class=&quot;no-modal&quot;&gt;&lt;img src=&quot;/portfolio/assets/jw/jw.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;My first commercial project I did while working at Coatsink.&lt;/p&gt;
 
@@ -279,7 +279,7 @@ void print(color[][] pxs)
 
 &lt;p&gt;Before this project, I used to use Unity for very simple tasks, without having a deep understanding of the engine and its potential. After completing the project I saw the light! Game engines now made complete sense: this project was a turning point for me because I created a &lt;em&gt;tiny&lt;/em&gt; engine, very similar to Unity (and others), and it boosted my confidence to the sky.&lt;/p&gt;
 
-&lt;p class=&quot;buttons_in_blog_text&quot;&gt;&lt;a href=&quot;https://marcomoroni.github.io/azucena/&quot;&gt;Website&lt;/a&gt;
+&lt;p class=&quot;buttons_in_blog_text&quot;&gt;&lt;a href=&quot;https://marcomoroni.github.io/azucena/&quot;&gt;Website &amp;amp; download&lt;/a&gt;
 &lt;a href=&quot;https://github.com/marcomoroni/azucena&quot;&gt;Source code&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;/portfolio/assets/azucena/capture_04.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;

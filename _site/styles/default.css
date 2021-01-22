@@ -40,12 +40,27 @@
   margin-right: auto;
 }
 
-.container.post > p > img {
+.container.post > p > img,
+.container.post > .videowrapper {
   margin-bottom: 4em;
 }
 
-.container.post > p > img:first-child {
+.container.post > p > img:first-child,
+.container.post > videowrapper:first-child {
   margin-top: 4em;
+}
+
+.container.post > .videoWrapper {
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 */
+  height: 0;
+}
+.container.post > .videoWrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
 
 /* no top or bottom margins for the first and last image */
@@ -125,7 +140,7 @@ sup {
 .container.post .buttons_in_blog_text a {
     border: 1px solid var(--text-color);
     padding: 1px 9px 1px 9px;
-    margin-right: 12px;
+    margin-right: 19px;
 }
 
 .container.post .buttons_in_blog_text a:hover {
@@ -521,14 +536,16 @@ div.highlighter-rouge code {
 .container.post > h3:first-child,
 .container.post > p:first-child > img:first-child,
 .container.post > div.highlighter-rouge:first-child,
-.container.post > div:first-child {
+.container.post > div:first-child,
+.container.post > videowrapper:first-child {
   margin-top: 0;
 }
 .container.post > p:last-child,
 .container.post > h3:last-child,
 .container.post > p:last-child > img:last-child,
 .container.post > div.highlighter-rouge:last-child,
-.container.post > div:last-child {
+.container.post > div:last-child,
+.container.post > videowrapper:last-child {
   margin-bottom: 0;
 }
 

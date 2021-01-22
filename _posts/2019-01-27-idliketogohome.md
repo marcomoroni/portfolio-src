@@ -9,6 +9,9 @@ preview_img: "/assets/idliketogohome/h1.png"
 ![]({{ site.baseurl }}{{ page.assets_folder }}/h1.png)
 ![]({{ site.baseurl }}{{ page.assets_folder }}/h2.png)
 ![]({{ site.baseurl }}{{ page.assets_folder }}/h3.png)
+<div class="videoWrapper">
+<iframe width="100%" height="auto" src="https://www.youtube.com/embed/kFk0DDlWAJY?color=white" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+</div>
 
 I made *I'd like to go home* during the 48h of the [Global Game Jam](https://globalgamejam.org/) 2019.
 

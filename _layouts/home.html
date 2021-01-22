@@ -24,7 +24,7 @@ layout: default
 <div class="blog_list">
   {% for post in site.posts %}
 
-    <div class="blog_list_post" style="{% if post.preview_img %}background-image: url({{ site.baseurl }}{{ post.preview_img }});{% endif %}">
+    <div class="blog_list_post{% unless post.preview_img %} missing-bg-pic{% endunless %}" style="{% if post.preview_img %}background-image: url({{ site.baseurl }}{{ post.preview_img }});{% endif %}">
 
       {% if post.preview_img %}<a class="post_preview_reveal" href="{{ site.baseurl }}{{ post.url }}"></a>{% endif %}
       <a class="post_link_cover" href="{{ site.baseurl }}{{ post.url }}"></a>

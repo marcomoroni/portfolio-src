@@ -437,6 +437,14 @@ div.highlighter-rouge code {
   transition: opacity 0.1s ease;
 }
 
+/* 
+If there's no picture, do not change the backgound color opacity (note this selector is
+used *after* the others so to override them)
+*/
+.blog_list_post.missing-bg-pic .preview_img {
+  opacity: 1;
+ }
+
 .abstract, .tags_list {
   transition: opacity 0.3s ease 0.22s;
 }
